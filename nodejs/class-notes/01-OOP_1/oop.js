@@ -103,5 +103,8 @@ const testArray = ['value0', 'value1', 'value2', 'value3'];
 
 // console.log(arr)
 
-// ? Spreadoperator (Dagitici)
+// ? Spreadoperator (Dagitici)  diziye dizi eklemek 
 
+const newarr = [...testArray, 'new-value1', ' new-value2' ]
+
+console.log(newarr)
