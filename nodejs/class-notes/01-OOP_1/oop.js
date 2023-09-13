@@ -102,3 +102,6 @@ const testArray = ['value0', 'value1', 'value2', 'value3'];
 // const [...arr] = testArray
 
 // console.log(arr)
+
+// ? Spreadoperator (Dagitici)
+
