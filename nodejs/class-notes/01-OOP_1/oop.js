@@ -79,4 +79,4 @@ return this.startEngine()
   };
 
 // console.log(Car.getDetails ())
-console.log(Car.arrowFunc)
+console.log(Car.arrowFunc())
