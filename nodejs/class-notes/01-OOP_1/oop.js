@@ -178,9 +178,11 @@ const CarContructor = function (brand, model, year=2011) {
     this.brand= brand
     this.model=model
     this.isActive =true
+    this.isRunning= false
     this.year=year
     this.startEngine = function () {
-        return ' Motor Calsiti'
+        this.isRunning= true
+        return ' Motor Calisti'
     }
 }
 
@@ -190,6 +192,11 @@ const CarContructor = function (brand, model, year=2011) {
 
  console.log(newCar)
 console.log(newCar2)
+
+console.log(newCar2.isRunning)
+console.log(newCar2.startEngine())
+console.log(newCar2.isRunning)
+
 // const Car2 = {
 //   brand: 'Ford',
 //   model: 'Mustang',
