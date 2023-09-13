@@ -108,7 +108,65 @@
 
 // console.log(newarr)
 
-const Car = {
+// const Car = {
+//   brand: 'Ford',
+//   model: 'Mustang',
+//   year: 1967,
+//   isAutoGear: true,
+//   color: ['white', 'red'],
+//   details: {
+//     color1: 'red',
+//     color2: 'white',
+//     engineSize: 4900,
+//   },
+//   startEngine: function () {
+//     return 'Motor calisti.';
+//   },
+// };
+
+// ! Rest
+// const {year, model, brand, ...otherItems} =Car
+
+// console.log(year, model, brand)
+// console.log(otherItems)
+
+// const {modelYear, model: newName, brand} = Car;
+
+// console.log (modelYear, newName, brand);
+// console.log (Car);
+
+// !  Spread
+// const newObj = {
+//   ...Car.color,
+//   newKey: 'new-value',
+// };
+
+// console.log (newObj);
+
+// ******   Object to Json   json string datadir.  json objeleri itterable degildir.
+
+// const json = JSON.stringify (Car);
+// console.log (typeof json, json);
+
+// ! JSON TO OBJECT
+
+// const newObj2 = JSON.parse (json);
+
+// console.log (typeof newObj2, newObj2);
+
+// !object to Array  objenin valuleri array cevirebilirz
+
+// const arr= [...Car]
+
+// const arr =Object.entries(Car)
+// console.log(arr)
+// const arr2= Object.values(Car)
+// console.log(arr2)
+// const arr3 = Object.keys(Car)
+// console.log(arr3)
+
+// ! ******* Constructure function
+const Car2 = {
   brand: 'Ford',
   model: 'Mustang',
   year: 1967,
@@ -123,45 +181,3 @@ const Car = {
     return 'Motor calisti.';
   },
 };
-
-// ! Rest
-// const {year, model, brand, ...otherItems} =Car
-
-// console.log(year, model, brand)
-// console.log(otherItems)
-
-const {modelYear, model: newName, brand} = Car;
-
-console.log (modelYear, newName, brand);
-console.log (Car);
-
-// !  Spread
-const newObj = {
-  ...Car.color,
-  newKey: 'new-value',
-};
-
-console.log (newObj);
-
-// ******   Object to Json   json string datadir.  json objeleri itterable degildir.
-
-const json = JSON.stringify (Car);
-console.log (typeof json, json);
-
-// ! JSON TO OBJECT
-
-const newObj2 = JSON.parse (json);
-
-console.log (typeof newObj2, newObj2);
-
-// !object to Array  objenin valuleri array cevirebilirz
-
-// const arr= [...Car]
-
-
-const arr =Object.entries(Car)
-console.log(arr)
-const arr2= Object.values(Car)
-console.log(arr2)
-const arr3 = Object.keys(Car)
-console.log(arr3)
