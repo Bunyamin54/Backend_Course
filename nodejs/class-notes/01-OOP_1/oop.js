@@ -27,8 +27,12 @@ const Car = {
   },
 
   startEngine: function () {
-    return 'Motor calisti';
+    return 'Motor calisti.';
   },
 };
 
 console.log(Car.brand)
+console.log(Car.color[0])
+console.log(Car.details)
+console.log(Car.details.engineSize)
+console.log(Car.startEngine())
