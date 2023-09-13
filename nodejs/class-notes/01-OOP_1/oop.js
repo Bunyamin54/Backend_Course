@@ -102,54 +102,54 @@
 
 // console.log(arr)
 
-// ? Spreadoperator (Dagitici)  diziye dizi eklemek 
+// ? Spreadoperator (Dagitici)  diziye dizi eklemek
 
 // const newarr = [...testArray, 'new-value1', ' new-value2' ]
 
 // console.log(newarr)
 
 const Car = {
-        brand: 'Ford',
-        model: 'Mustang',
-        year: 1967,
-        isAutoGear: true,
-        color: ['white', 'red'],
-        details: {
-          color1: 'red',
-          color2: 'white',
-          engineSize: 4900,
-        },
-        startEngine: function () {
-                  return 'Motor calisti.';
-                }
-            }
+  brand: 'Ford',
+  model: 'Mustang',
+  year: 1967,
+  isAutoGear: true,
+  color: ['white', 'red'],
+  details: {
+    color1: 'red',
+    color2: 'white',
+    engineSize: 4900,
+  },
+  startEngine: function () {
+    return 'Motor calisti.';
+  },
+};
 
-            // ! Rest
-            // const {year, model, brand, ...otherItems} =Car
+// ! Rest
+// const {year, model, brand, ...otherItems} =Car
 
-            // console.log(year, model, brand)
-            // console.log(otherItems)
+// console.log(year, model, brand)
+// console.log(otherItems)
 
-            const {modelYear, model: newName, brand } =Car
+const {modelYear, model: newName, brand} = Car;
 
-            console.log(modelYear,newName,brand)
-            console.log(Car)
-            
+console.log (modelYear, newName, brand);
+console.log (Car);
+
 // !  Spread
-            const newObj = {
-                ...Car.color,
-                newKey:'new-value'
-            }
+const newObj = {
+  ...Car.color,
+  newKey: 'new-value',
+};
 
-            console.log(newObj)
+console.log (newObj);
 
-            // ******   Object to Json
+// ******   Object to Json   json string datadir.
 
-            const json =JSON.stringify(Car)
-            console.log(typeof json, json)
+const json = JSON.stringify (Car);
+console.log (typeof json, json);
 
-            // ! JSON TO OBJECT
+// ! JSON TO OBJECT
 
-            const newObj2= JSON.parse(json)
+const newObj2 = JSON.parse (json);
 
-            console.log(typeof newObj2, newObj2)
+console.log (typeof newObj2, newObj2);
