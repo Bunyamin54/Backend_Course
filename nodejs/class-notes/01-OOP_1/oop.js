@@ -98,7 +98,6 @@
 
 // console.log (first, second, others); //! 1. ve 2. veri degisken olarak digerleri restmethodu ile Array icinde geldi.
 
-
 // const [...arr] = testArray
 
 // console.log(arr)
@@ -125,7 +124,6 @@ const Car = {
                 }
             }
 
-
             // ! Rest
             // const {year, model, brand, ...otherItems} =Car
 
@@ -144,3 +142,14 @@ const Car = {
             }
 
             console.log(newObj)
+
+            // ******   Object to Json
+
+            const json =JSON.stringify(Car)
+            console.log(typeof json, json)
+
+            // ! JSON TO OBJECT
+
+            const newObj2= JSON.parse(json)
+
+            console.log(typeof newObj2, newObj2)
