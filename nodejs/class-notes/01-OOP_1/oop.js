@@ -154,6 +154,14 @@ const newObj2 = JSON.parse (json);
 
 console.log (typeof newObj2, newObj2);
 
-// !object to Array
+// !object to Array  objenin valuleri array cevirebilirz
 
 // const arr= [...Car]
+
+
+const arr =Object.entries(Car)
+console.log(arr)
+const arr2= Object.values(Car)
+console.log(arr2)
+const arr3 = Object.keys(Car)
+console.log(arr3)
