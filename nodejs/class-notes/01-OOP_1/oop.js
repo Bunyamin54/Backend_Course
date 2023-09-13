@@ -166,18 +166,42 @@
 // console.log(arr3)
 
 // ! ******* Constructure function
-const Car2 = {
-  brand: 'Ford',
-  model: 'Mustang',
-  year: 1967,
-  isAutoGear: true,
-  color: ['white', 'red'],
-  details: {
-    color1: 'red',
-    color2: 'white',
-    engineSize: 4900,
-  },
-  startEngine: function () {
-    return 'Motor calisti.';
-  },
-};
+// ? "NEW KEYWORD"
+
+const PascalCaseNamed = function () {
+    this.property ='value'
+}
+
+
+const CarContructor = function (brand, model, year=2011) {
+
+    this.brand= brand
+    this.model=model
+    this.isActive =true
+    this.year=year
+    this.startEngine = function () {
+        return ' Motor Calsiti'
+    }
+}
+
+
+ const newCar = new CarContructor('Ford', 'Mustang', 1967)
+ const newCar2 = new CarContructor('Toyota', 'Corolla')
+
+ console.log(newCar)
+console.log(newCar2)
+// const Car2 = {
+//   brand: 'Ford',
+//   model: 'Mustang',
+//   year: 1967,
+//   isAutoGear: true,
+//   color: ['white', 'red'],
+//   details: {
+//     color1: 'red',
+//     color2: 'white',
+//     engineSize: 4900,
+//   },
+//   startEngine: function () {
+//     return 'Motor calisti.';
+//   },
+// };
