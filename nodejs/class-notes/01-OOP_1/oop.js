@@ -30,3 +30,5 @@ const Car = {
     return 'Motor calisti';
   },
 };
+
+console.log(Car.brand)
