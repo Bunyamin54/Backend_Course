@@ -83,7 +83,7 @@
 
 // ! Array Destructuring
 
-const testArray = ['value0', 'value1', 'value2', 'value3'];
+// const testArray = ['value0', 'value1', 'value2', 'value3'];
 
 // const var0= testArray[0]
 // const var1= testArray[1]
@@ -105,6 +105,42 @@ const testArray = ['value0', 'value1', 'value2', 'value3'];
 
 // ? Spreadoperator (Dagitici)  diziye dizi eklemek 
 
-const newarr = [...testArray, 'new-value1', ' new-value2' ]
+// const newarr = [...testArray, 'new-value1', ' new-value2' ]
 
-console.log(newarr)
+// console.log(newarr)
+
+const Car = {
+        brand: 'Ford',
+        model: 'Mustang',
+        year: 1967,
+        isAutoGear: true,
+        color: ['white', 'red'],
+        details: {
+          color1: 'red',
+          color2: 'white',
+          engineSize: 4900,
+        },
+        startEngine: function () {
+                  return 'Motor calisti.';
+                }
+            }
+
+
+            // ! Rest
+            // const {year, model, brand, ...otherItems} =Car
+
+            // console.log(year, model, brand)
+            // console.log(otherItems)
+
+            const {modelYear, model: newName, brand } =Car
+
+            console.log(modelYear,newName,brand)
+            console.log(Car)
+            
+// !  Spread
+            const newObj = {
+                ...Car.color,
+                newKey:'new-value'
+            }
+
+            console.log(newObj)
