@@ -143,7 +143,7 @@ const newObj = {
 
 console.log (newObj);
 
-// ******   Object to Json   json string datadir.
+// ******   Object to Json   json string datadir.  json objeleri itterable degildir.
 
 const json = JSON.stringify (Car);
 console.log (typeof json, json);
@@ -153,3 +153,7 @@ console.log (typeof json, json);
 const newObj2 = JSON.parse (json);
 
 console.log (typeof newObj2, newObj2);
+
+// !object to Array
+
+// const arr= [...Car]
