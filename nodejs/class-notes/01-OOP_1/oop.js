@@ -92,8 +92,13 @@ const testArray = ['value0', 'value1', 'value2', 'value3'];
 
 // console.log(firstItem,secondItem)
 
-// ? SpreadOperator
+// ? SpreadOperator  (en sonda olmak zorunda)
 
-const [first, second, ...others] = testArray;
+// const [first, second, ...others] = testArray;
 
-console.log (first, second, others); //! 1. ve 2. veri degisken olarak digerleri spread methodu ile Array icinde geldi.
+// console.log (first, second, others); //! 1. ve 2. veri degisken olarak digerleri spread methodu ile Array icinde geldi.
+
+
+// const [...arr] = testArray
+
+// console.log(arr)
