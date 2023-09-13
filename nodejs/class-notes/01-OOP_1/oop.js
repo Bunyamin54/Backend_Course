@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 
 //  Objects
 
@@ -15,19 +15,18 @@
 // console.log(exampleObject.methodName)
 
 const Car = {
-
-brand: 'Ford',
-model:'Mustang',
-year: 1967,
-isAutoGear:true,
-color: ['white', 'red'],
-details: {
-    color1:'red',
+  brand: 'Ford',
+  model: 'Mustang',
+  year: 1967,
+  isAutoGear: true,
+  color: ['white', 'red'],
+  details: {
+    color1: 'red',
     color2: 'white',
-    engineSize:4900
-},
+    engineSize: 4900,
+  },
 
-startEngine:function (){
-    return 'Motor calisti'
-}
-}
+  startEngine: function () {
+    return 'Motor calisti';
+  },
+};
