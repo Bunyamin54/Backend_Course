@@ -4,7 +4,13 @@
     MODULES
 ------------------------------------------------------- */
 
-console.log('index.js çalıştı.')
+// console.log('index.js çalıştı.')
+
+const test = function() {
+    console.log('index.js çalıştı.')
+}
+
+// EXPORT:
+module.exports = test
 
 /* ------------------------------------------------------- */
-
