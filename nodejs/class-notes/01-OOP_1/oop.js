@@ -12,7 +12,7 @@ const exampleObject = {
 }
 
 console.log (exampleObject.propertyName)
-
+console.log(exampleObject.methodName())
 
 
 
