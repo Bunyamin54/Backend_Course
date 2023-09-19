@@ -458,4 +458,8 @@ const CarConstructor = function (brand, model, year) {
 
 const newCar = new CarConstructor ('Ford', 'Mustang', 1967)
 console.log(newCar)
+
+
+const newCar2 = new CarConstructor ('Toyota', 'Corolla', 2010)
+console.log(newCar2)
 /* ---------------------------------------*/
