@@ -37,11 +37,16 @@ console.log(exampleObject.methodName())
 
 
 
-console.log(Car.brand)
-console.log(Car.color[0])
-console.log(Car.details)
-console.log(Car.details.engineSize)
-console.log(Car.startEngine())
+// console.log(Car.brand)
+// console.log(Car.color[0])
+// console.log(Car.details)
+// console.log(Car.details.engineSize)
+// console.log(Car.startEngine())
+
+console.log(Car['brand'])
+console.log(Car.details['engineSize'])
+console.log(Car.details['color2'])
+
 
 //!  Objects
 
