@@ -52,8 +52,24 @@ const Car =  {
      
    startEngine : function () {
     return 'Motor Calisti'
+   },
+
+   getDetails:function() {
+    // return this
+    // return this.brand + ' ' + this.model + ' ' + this.year 
+    return this.startEngine()
+   },
+
+   arrowFunc: () => {
+   return this
+   
    }
+  
  }
+
+ console.log(Car.getDetails ())
+ console.log(Car.arrowFunc())
+//  console.log(object)
 
 
 // console.log(Car.brand)
