@@ -1,6 +1,6 @@
 'use strict';
 
-
+/*  ---------------------------*
 const exampleObject = {
 
     propertyName : 'value',
@@ -34,7 +34,26 @@ console.log(exampleObject.methodName())
     return 'Motor Calisti'
    }
  }
+/*  ---------------------------*/
+ 
+const Car =  {
 
+    brand:'Ford',
+    model:'Mustang',
+    year:1967,
+    isAutoGear:true,
+    color:['white', 'red'],
+    
+   details :{
+    color1:'red',
+    color2:'white',
+    engineSize:4900,
+   },
+     
+   startEngine : function () {
+    return 'Motor Calisti'
+   }
+ }
 
 
 // console.log(Car.brand)
@@ -43,11 +62,11 @@ console.log(exampleObject.methodName())
 // console.log(Car.details.engineSize)
 // console.log(Car.startEngine())
 
-console.log(Car['brand'])
-console.log(Car.details['engineSize'])
-console.log(Car.details['color2'])
-console.log(Car['details'] ['enginSize'])
-console.log(Car['startEngine']())
+// console.log(Car['brand'])
+// console.log(Car.details['engineSize'])
+// console.log(Car.details['color2'])
+// console.log(Car['details'] ['enginSize'])
+// console.log(Car['startEngine']())
 //!  Objects
 
 // const exampleObject = {
