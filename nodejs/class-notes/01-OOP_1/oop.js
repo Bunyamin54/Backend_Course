@@ -1,5 +1,24 @@
 'use strict';
 
+
+const exampleObject = {
+
+    propertyName : 'value',
+
+    methodName : function () {
+
+        return 'This is Method'
+    }
+}
+
+console.log (exampleObject.propertyName)
+
+
+
+
+
+
+
 //!  Objects
 
 // const exampleObject = {
@@ -168,34 +187,34 @@
 // ! ******* Constructure function
 // ? "NEW KEYWORD"
 
-const PascalCaseNamed = function () {
-    this.property ='value'
-}
+// const PascalCaseNamed = function () {
+//     this.property ='value'
+// }
 
 
-const CarContructor = function (brand, model, year=2011) {
+// const CarContructor = function (brand, model, year=2011) {
 
-    this.brand= brand
-    this.model=model
-    this.isActive =true
-    this.isRunning= false
-    this.year=year
-    this.startEngine = function () {
-        this.isRunning= true
-        return ' Motor Calisti'
-    }
-}
+//     this.brand= brand
+//     this.model=model
+//     this.isActive =true
+//     this.isRunning= false
+//     this.year=year
+//     this.startEngine = function () {
+//         this.isRunning= true
+//         return ' Motor Calisti'
+//     }
+// }
 
 
- const newCar = new CarContructor('Ford', 'Mustang', 1967)
- const newCar2 = new CarContructor('Toyota', 'Corolla')
+//  const newCar = new CarContructor('Ford', 'Mustang', 1967)
+//  const newCar2 = new CarContructor('Toyota', 'Corolla')
 
- console.log(newCar)
-console.log(newCar2)
+//  console.log(newCar)
+// console.log(newCar2)
 
-console.log(newCar2.isRunning)
-console.log(newCar2.startEngine())
-console.log(newCar2.isRunning)
+// console.log(newCar2.isRunning)
+// console.log(newCar2.startEngine())
+// console.log(newCar2.isRunning)
 
 // const Car2 = {
 //   brand: 'Ford',
