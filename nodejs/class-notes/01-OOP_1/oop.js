@@ -46,8 +46,8 @@ console.log(exampleObject.methodName())
 console.log(Car['brand'])
 console.log(Car.details['engineSize'])
 console.log(Car.details['color2'])
-
-
+console.log(Car['details'] ['enginSize'])
+console.log(Car['startEngine']())
 //!  Objects
 
 // const exampleObject = {
