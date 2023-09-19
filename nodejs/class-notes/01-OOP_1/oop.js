@@ -351,6 +351,74 @@ console.log(newArr)
 /* ---------------------------------------*/
 
   
+// const Car =  {
+
+//     brand:'Ford',
+//     model:'Mustang',
+//     year:1967,
+//     isAutoGear:true,
+//     color:['white', 'red'],
+    
+//    details :{
+//     color1:'red',
+//     color2:'white',
+//     engineSize:4900,
+//    },
+     
+//    startEngine : function () {
+//     return 'Motor Calisti'
+//    },
+
+
+// }
+
+
+// const {year, model, brand, ...otherItems} = Car
+
+// console.log(year,model, brand)
+// console.log(otherItems)
+
+// const {year:ModelYear, model:NewName, brand, ...otherItems} = Car
+
+// console.log(ModelYear,NewName, brand)
+
+// const newObj = {
+
+//     ...Car,
+//     newKey: 'new-value'
+// }
+
+// console.log(newObj)
+// console.log(object)
+/* ---------------------------------------*
+
+Object to json
+const json = JSON.stringify(Car)
+
+console.log(typeof json, json)
+
+!json to object
+
+const newObj2 = JSON.parse(json)
+
+console.log(typeof newObj2, newObj2)
+
+! objec to Array
+
+
+const arr = [ ...Object.entries(Car)]
+
+console.log(arr)
+
+const arr2 =Object.values(Car)
+console.log(arr2)
+
+const arr3 =Object.keys(Car)
+console.log(arr3)
+/* ---------------------------------------*/
+/* ---------------------------------------*/
+
+//* Constructure funcction
 const Car =  {
 
     brand:'Ford',
@@ -373,46 +441,21 @@ const Car =  {
 }
 
 
-// const {year, model, brand, ...otherItems} = Car
-
-// console.log(year,model, brand)
-// console.log(otherItems)
-
-const {year:ModelYear, model:NewName, brand, ...otherItems} = Car
-
-console.log(ModelYear,NewName, brand)
-
-const newObj = {
-
-    ...Car,
-    newKey: 'new-value'
+const PascalCaseNamed = function () {
+    this.property = 'value'
 }
 
-console.log(newObj)
-// console.log(object)
-/* ---------------------------------------*/
+const CarConstructor = function (brand, model, year) {
 
-// Object to json
-const json = JSON.stringify(Car)
-
-console.log(typeof json, json)
-
-// !json to object
-
-const newObj2 = JSON.parse(json)
-
-console.log(typeof newObj2, newObj2)
-
-//! objec to Array
+    this.brand = brand
+    this.model = model
+    this.year = year
+    this.startEngine = function () {
+        return 'Motor Calisti'
+    }
+}
 
 
-const arr = [ ...Object.entries(Car)]
-
-console.log(arr)
-
-const arr2 =Object.values(Car)
-console.log(arr2)
-
-const arr3 =Object.keys(Car)
-console.log(arr3)
+const newCar = new CarConstructor ('Ford', 'Mustang', 1967)
+console.log(newCar)
 /* ---------------------------------------*/
