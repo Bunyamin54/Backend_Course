@@ -68,7 +68,7 @@
 		{ firstName: 'Test7', lastName: 'Test7', age: 17 },
 		{ firstName: 'Test8', lastName: 'Test8', age: 18 },
 		{ firstName: 'Test9', lastName: 'Test9', age: 19 },
-	]);
+	])
 	// db.coll.insert() method is depracated.
 
 	/* SELECT */
@@ -110,9 +110,9 @@
 	db.coll.find().sort({ age: -1 }).limit(5)
 	// Count:
 	db.coll.find().count()
-	db.coll.countDocuments()
+	db.coll.countDocuments() // ShortHand find().count()
 	db.coll.countDocuments({ firstName: 'Test' })
-	db.coll.estimatedDocumentCount()
+	db.coll.estimatedDocumentCount() // for bigData
 	// db.coll.count() method is depracated.
 
 
@@ -134,5 +134,5 @@
 	// db.coll.deleteMany( { filters } )
 	db.coll.deleteOne({ age: 19 })
 	db.coll.deleteMany({ age: 19 })
-	db.coll.deleteMany({/* all */ })
+	db.coll.deleteMany({/* all */ }) // Delete all documents.
 	// db.coll.remove() method is depracated.
