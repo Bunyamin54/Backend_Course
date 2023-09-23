@@ -68,7 +68,7 @@
 		{ firstName: 'Test7', lastName: 'Test7', age: 17 },
 		{ firstName: 'Test8', lastName: 'Test8', age: 18 },
 		{ firstName: 'Test9', lastName: 'Test9', age: 19 },
-	])
+	]);
 	// db.coll.insert() method is depracated.
 
 	/* SELECT */
