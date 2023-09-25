@@ -21,15 +21,90 @@ app.get('/', (request, response) =>
  response.send({ message: 'called in  "get" method' })
 } )
 
-app.get('/', (request, response) => {
+// app.get('/', (request, response) => {
     //? run response.send for print-out:
     // response.send( 'Welcome to Express' )
-    response.send({ message: 'called in "get" method' })
-})
+    // response.send({ message: "called in 'get' method" })
+// })
 
-app.post('/', (request, response) => response.send({ message: "called in 'post' method."}))
-app.put('/', (request, response) => response.send({ message: "called in 'put' method."}))
-app.delete('/', (request, response) => response.send({ message: "called in 'delete' method."}))
+// app.post('/', (request, response) => response.send({ message: "called in 'post' method."}))
+// app.put('/', (request, response) => response.send({ message: "called in 'put' method."}))
+// app.delete('/', (request, response) => response.send({ message: "called in 'delete' method."}))
+
+//? allow at all methods:
+app.all('/', (request, response) => response.send({ message: "'all' option allows to all methods."})) //* mumkun mertebe kullanilmamali 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //* listen port
