@@ -32,13 +32,13 @@ app.get('/', (request, response) =>
 // app.delete('/', (request, response) => response.send({ message: "called in 'delete' method."}))
 
 //? allow at all methods:
-app.all('/', (request, response) => response.send({ message: "'all' option allows to all methods."})) //* mumkun mertebe kullanilmamali 
+// app.all('/', (request, response) => response.send({ message: "'all' option allows to all methods."})) //* mumkun mertebe kullanilmamali 
 
 
+//? app.route ('url)
 
 
-
-
+app.route ('/').get ( () )
 
 
 
