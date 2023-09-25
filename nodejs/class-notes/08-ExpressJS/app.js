@@ -49,6 +49,45 @@ app.get(/xyz/, (req, res) => res.send("regexp /xyz/")) // url contains = 'xyz' (
 app.get(/^xyz/, (req, res) => res.send("regexp /^xyz/")) // url startswith = 'xyz'
 app.get(/xyz$/, (req, res) => res.send("regexp /xyz$/")) // url endswith = 'xyz'
 
+// /user/66/config/update/any/any/any
+
+app.get('/user/:userId/config/:configParam/*', (req, res) => {
+    res.send({
+        url: {
+            protocol: req.protocol,
+            subdomains: req.subdomains,
+            hostname: req.hostname,
+            baseUrl: req.baseUrl,
+            params: req.params,
+            query: req.query,
+            path: req.path,
+            originalUrls: req.originalUrl
+        }
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------- */
 // app.listen(PORT, () => console.log(`Running on http://127.0.0.1:${PORT}`))
 app.listen(PORT, HOST, () => console.log(`Running on http://${HOST}:${PORT}`))
