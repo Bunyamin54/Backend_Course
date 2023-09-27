@@ -152,7 +152,14 @@ app.get('/', (req, res) => {
 /* ------------------------------------------------------- */
 //* Calling middlewares from file:
 
+
+
 const [middleFunction1, middleFunction2 ]= require('./middlewares/')
 
+const middleFunctions = require ()
+app.get('/*', (req, res) => {
+        res.send({
+            message: 'Welcome to Home'
+        })
 /* ------------------------------------------------------- */
 app.listen(PORT, () => console.log("Running: http://127.0.0.1:" + PORT));
