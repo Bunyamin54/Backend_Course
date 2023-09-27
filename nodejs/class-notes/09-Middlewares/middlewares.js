@@ -100,59 +100,59 @@ app.get('/', (req, res) => {
 /* ------------------------------------------------------- */
 //* Middlewares & use():
 
-const middleFunction1 = (req, res, next) => {
+// const middleFunction1 = (req, res, next) => {
 
-    // console.log( req.query )
-    const skip = req.query.skip ?? false
+//     // console.log( req.query )
+//     const skip = req.query.skip ?? false
 
-    req.customData = 'Custom Data With Request'
-    res.customDataWithResponse = 'Custom Data With Response'
+//     req.customData = 'Custom Data With Request'
+//     res.customDataWithResponse = 'Custom Data With Response'
 
-    if (skip) {
+//     if (skip) {
         
-        // Bir sonraki bağımsız fonksiyona git:
-        console.log('next-route çalıştı')
-        next('route')
+//         // Bir sonraki bağımsız fonksiyona git:
+//         console.log('next-route çalıştı')
+//         next('route')
 
-    } else {
-        // Bir sonraki callback fonksiyona git:
-        console.log('next çalıştı')
-        next()
-    }
-}
+//     } else {
+//         // Bir sonraki callback fonksiyona git:
+//         console.log('next çalıştı')
+//         next()
+//     }
+// }
 
-const middleFunction2 = (req, res, next) => {
+// const middleFunction2 = (req, res, next) => {
 
-    // next()
+//     // next()
     
-    res.send({
-        customData: [
-            req.customData,
-            res.customDataWithResponse
-        ],
-        message: "Here is func2, next() runned"
-    });
+//     res.send({
+//         customData: [
+//             req.customData,
+//             res.customDataWithResponse
+//         ],
+//         message: "Here is func2, next() runned"
+//     });
 
-}
+// }
 
-// app.use(middleFunction1) // default-url = *
-// app.use('/*', middleFunction1) // default-url = *
+// // app.use(middleFunction1) // default-url = *
+// // app.use('/*', middleFunction1) // default-url = *
 
-// app.use('/path', middleFunction1) // /path == /path/*
+// // app.use('/path', middleFunction1) // /path == /path/*
 
-// app.use(middleFunction1, middleFunction2)
-app.use( [ middleFunction1, middleFunction2 ] )
+// // app.use(middleFunction1, middleFunction2)
+// app.use( [ middleFunction1, middleFunction2 ] )
 
-app.get('/*', (req, res) => {
-    res.send({
-        message: 'Welcome to Home'
-    })
-})
+// app.get('/*', (req, res) => {
+//     res.send({
+//         message: 'Welcome to Home'
+//     })
+// })
 
 /* ------------------------------------------------------- */
 //* Calling middlewares from file:
 
-
+const [middleFunction1, middleFunction2 ]= require('./middlewares/')
 
 /* ------------------------------------------------------- */
 app.listen(PORT, () => console.log("Running: http://127.0.0.1:" + PORT));
