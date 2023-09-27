@@ -14,8 +14,3 @@ $ npm init -y
  nodemon
 
 
- app.get ('/' (req, res) => {
-
-
-
- }), 
