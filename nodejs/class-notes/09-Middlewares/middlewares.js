@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8000;
 //? Middleware functions must be has three parameters. 
 //? Last parameter is for next().
 
-//! next() for next Function:
+//* next() for next Function:
 
 // Middleware:
 app.get('/', (req, res, next) => {
@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 })
 
 /* ------------------------------------------------------- *
-//! next() for next callBackFunction:
+//* next() for next callBackFunction:
 
 const middleFunction1 = (req, res, next) => {
 
@@ -72,7 +72,7 @@ const middleFunction2 = (req, res, next) => {
             req.customData,
             res.customDataWithResponse
         ],
-        message: "Here is func2, first next() runned"
+        message: "Here is func2, next() runned"
     });
 
 }
@@ -98,7 +98,7 @@ app.get('/', (req, res) => {
 })
 
 /* ------------------------------------------------------- */
-// Middlewares & USE:
+//* Middlewares & use():
 
 const middleFunction1 = (req, res, next) => {
 
@@ -111,25 +111,48 @@ const middleFunction1 = (req, res, next) => {
     if (skip) {
         
         // Bir sonraki bağımsız fonksiyona git:
+        console.log('next-route çalıştı')
         next('route')
 
     } else {
         // Bir sonraki callback fonksiyona git:
-
+        console.log('next çalıştı')
+        next()
     }
 }
 
-app.get('/', (req, res) => {
+const middleFunction2 = (req, res, next) => {
+
+    // next()
+    
     res.send({
-        message: 'first route'
+        customData: [
+            req.customData,
+            res.customDataWithResponse
+        ],
+        message: "Here is func2, next() runned"
+    });
+
+}
+
+// app.use(middleFunction1) // default-url = *
+// app.use('/*', middleFunction1) // default-url = *
+
+// app.use('/path', middleFunction1) // /path == /path/*
+
+// app.use(middleFunction1, middleFunction2)
+app.use( [ middleFunction1, middleFunction2 ] )
+
+app.get('/*', (req, res) => {
+    res.send({
+        message: 'Welcome to Home'
     })
 })
 
-app.get('/', (req, res) => {
-    res.send({
-        message: 'second route'
-    })
-})
+/* ------------------------------------------------------- */
+//* Calling middlewares from file:
+
+
 
 /* ------------------------------------------------------- */
 app.listen(PORT, () => console.log("Running: http://127.0.0.1:" + PORT));
