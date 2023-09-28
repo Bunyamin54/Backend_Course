@@ -14,12 +14,12 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT || 8000;
 
-/* ------------------------------------------------------- */
+/* ------------------------------------------------------- *
 
 app.get('/user/:id', (req, res) => {
     const id = req.params.id ?? 0
     if (isNaN(id)) {
-        res.statusCode = 402
+        res.statusCode = 400
         throw new Error('ID is Not A Number', { cause: 'params.id='+id })
     } else {
         res.send({ 
@@ -32,7 +32,7 @@ app.get('/user/:id', (req, res) => {
 /* ------------------------------------------------------- *
 // TRY-CATCH:
 
-app.get('/user/:id', (req, res) => {
+app.get('/user/:id', (req, res, next) => {
 
     try {
         const id = req.params.id ?? 0
@@ -45,18 +45,33 @@ app.get('/user/:id', (req, res) => {
             })
         }
     } catch (err) {
-        res.send({ 
-            error: true, 
-            message: err.message,
-            cause: err.cause
-        })
+
+        console.log('try-catch runned')
+        next(err) // Go to ErrorHandler
+
+        // res.send({ 
+        //     error: true, 
+        //     message: err.message,
+        //     cause: err.cause
+        // })
     }
 
 })
 /* ------------------------------------------------------- */
+// ASYNC:
 
+const asyncFunction = async () => {
+    throw new Error('Created error in async-func')
+}
 
+//? Control with catch(next)
+app.get('/async', async (req, res, next) => {
+    await asyncFunction().catch(next) // Go to ErrorHandler
+})
 
+/* ------------------------------------------------------- */
+// express-async-handler
+// $ npm i express-async-handler
 
 
 
