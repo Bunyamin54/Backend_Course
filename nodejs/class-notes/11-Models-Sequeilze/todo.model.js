@@ -29,7 +29,7 @@ const Todo = sequelize.define('todo', {
     },
     description: DataTypes.TEXT, // ShortHand Using.
     priority: { // 1: High, 0: Normal, -1: Low
-        type: DataTypes.TINYINT,
+        type: DataTypes.TINYINT, //postgress integer 
         allowNull: false,
         defaultValue: 0, // set default value.
     },
