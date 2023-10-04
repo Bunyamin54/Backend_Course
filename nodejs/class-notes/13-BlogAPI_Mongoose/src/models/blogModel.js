@@ -5,66 +5,69 @@
 
 const mongoose = require('mongoose')
 
-// const nameSchema = new mongoose.Schema({
+/* ------------------------------------------------------- *
+https://mongoosejs.com/docs/models.html
 
- //  _id  AUTO  CREATED 
+const nameSchema = new mongoose.Schema({
+    
+    // _id: // AUTO CREATED
 
- //fieldName: String // shorthands Uaing
+    // fieldName: String // Shorthand Using
+    fieldName: {
+        type: String, // Veri tipi
+        defualt: null, // Default bir değer atayabiliriz.
+        trim: true, // Gelen veriyi trim'den geçir: trim(data)
+        select: true, // Show/UnShow
+        index: false, // Daha hızlı erişim olsun mu?
+        unique: false, // Benzersiz kayıt olsun mu?
+        required: [true, 'Error-Message'], // JSON data içinde gelmesi zorunlu mu?
+        enum: [[0, 1, 2, 3], 'Error-Message'], // Pattern/Constraint/Limit/Choices
+        validate: [function(data) { return true }, 'Error-Message'], // Veriyi filtreden geçiren fonksiyon.
+        get: function(data) { return true }, // Veri çağırırken çalıştırılacak fonksiyon
+        set: function(data) { return true }, // Veri kaydederken çalıştırılacak fonksiyon
+    }
 
- // ! Default model tanimlamasi bu sekilde asakidaki dosyaseklinde 
+}, {
+    collection: 'collectionName', // Tablo ismi ne olsun?
+    timestamps: true, // Create and Manage 'createdAt' and 'updatedAt'
+})
 
-//  fieldName : {
-//     type: String,   // veri tipi
-//     default: null,  // dafault bir  deger atama
-//     trim:true,  // gelen veriyi trimden gecirme boslugu alma trim data
-//     select: true, // show /unshow 
-//     index: false, // veri tabanlarindaki ndex kavrami aha hizli ulasmak icin bir sutuna 
-//     unique:false , // benzersiz kayit
-//     //required:true, 
-//     required: [true, 'Error message '],  // Data Json data icinde gelmesi zorunlu mu?
-//     enum: [[0,1,2,3], 'Error-Massage'] , //   Pattern sabitleme sinirlama 
-//     validate: [validateFunction, 'Error-Message' ] , // [function(data) {return true}, 'Error-Message']  veriyi filtreden geciren function
-//     get: function(data) {return true},  // veri cagirirken calsitrilcak functino 
-//     set: function(data) {return true},  // veri akydederken calistrilacak function 
-//  }
+/* ------------------------------------------------------- */
+// blogPost:
 
-// }, {
+const blogPostSchema = new mongoose.Schema({
 
-//    collection: 'collectionName',  // tablo ismi ne olsun
-//    timestamps: true,  // created and manage created and updated
+    // _id
 
+    title: {
+        type: String,
+        trim: true,
+        required: true
+    },
 
-// })
+    content: {
+        type: String,
+        trim: true,
+        required: true
+    },
 
-const blogPostSchema = new mongoose.Schema ({
+    published: {
+        type: Boolean,
+        default: true
+    },
 
-  title: {
-    type: String,
-    trim: true,
-    require:true
-  },
+    // createdAt
+    // updatedAt
 
-   content : {
+}, { collection: 'blogPosts', timestamps: true })
 
-     type:String,
-     trim:true,
-     require:true
+// const BlogPostModel = mongoose.model('BlogPost', blogPostSchema)
+// module.exports = {
+//     // BlogCategory:
+//     BlogPost: BlogPostModel
+// }
 
-   },
-
-     published: {
-     type:Boolean,
-     default:true
-
-     },
-
-   // createdAt
-   //updatedAt  otomatik elenecek
-
-}, {collection: 'blogPosts', timestamps:true})
-
-// const BlogPostModel  = mongoose.model('BlogPost', blogPostSchema)
-
-module.exports  {
-   // blogCategory:
-    BlogPost: mongoose.model('BlogPost', blogPostSchema) }
+module.exports = {
+    // BlogCategory:
+    BlogPost: mongoose.model('BlogPost', blogPostSchema)
+}

@@ -3,9 +3,9 @@
     EXPRESSJS - BLOG Project with Mongoose
 ------------------------------------------------------- */
 /*
- * npm init -y
- * npm i express dotenv express-async-errors
- * npm i mongoose
+ * $ npm init -y
+ * $ npm i express dotenv express-async-errors
+ * $ npm i mongoose
 */
 
 const express = require('express')
@@ -18,24 +18,19 @@ const PORT = process.env.PORT || 8000
 
 app.use(express.json())
 
+// Connect to MongoDB with Mongoose:
+require('./src/dbConnection')
+
+// HomePage:
 app.all('/', (req, res) => {
     res.send('WELCOME TO BLOG API')
 })
 
 // Routes:
-
-app.use(require('./src/routes/blogRoute'))
-
-
-
-
+app.use('/blog', require('./src/routes/blogRoute'))
 
 /* ------------------------------------------------------- */
-// sarti en asagida kullanmak en son err olmali 
-require('./src/dbConnection')
-// erorrHandler
-
+// errorHandler:
 app.use(require('./src/errorHandler'))
-
 
 app.listen(PORT, () => console.log('Running: http://127.0.0.1:' + PORT))

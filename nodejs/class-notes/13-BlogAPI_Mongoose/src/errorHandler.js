@@ -2,22 +2,16 @@
 /* -------------------------------------------------------
     EXPRESSJS - BLOG Project with Mongoose
 ------------------------------------------------------- */
-
-// Catch errros  errro handler hata yakalaayici bunu yazinca nodejs anliyor
-
+// Catch Errors:
 
 module.exports = (err, req, res, next) => {
 
+    const errorStatusCode = res?.errorStatusCode ?? 500
 
-  const errorStatusCode = res.errorStatusCode ?? 500
-
-   res.status(errorStatusCode).send( {
-
-   error: true, 
-   message : err.message,
-   cause: err.cause,
-   body:req.body  // sending json data
-
-   })
-
+    res.status(errorStatusCode).send({
+        error: true,
+        message: err.message,
+        cause: err.cause,
+        body: req.body // sending json data
+    })
 }
