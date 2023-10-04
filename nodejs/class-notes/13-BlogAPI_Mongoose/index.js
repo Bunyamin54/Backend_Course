@@ -25,5 +25,11 @@ app.all('/', (req, res) => {
 // continue from here...
 
 /* ------------------------------------------------------- */
+// sarti en asagida kullanmak en son err olmali 
+
+// erorrHandler
+
+app.use(require('./src/errorHandler'))
+
 
 app.listen(PORT, () => console.log('Running: http://127.0.0.1:' + PORT))
