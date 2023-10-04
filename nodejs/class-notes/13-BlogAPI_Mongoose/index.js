@@ -22,7 +22,9 @@ app.all('/', (req, res) => {
     res.send('WELCOME TO BLOG API')
 })
 
-// continue from here...
+// Routes:
+
+app.use(require('./src/routes/blogRoute'))
 
 
 
