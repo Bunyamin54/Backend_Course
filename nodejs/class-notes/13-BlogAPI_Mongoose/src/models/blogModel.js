@@ -16,7 +16,10 @@ const nameSchema = new mongoose.Schema({
     default: null,  // dafault bir  deger atama
     trim:true,  // gelen veriyi trimden gecirme boslugu alma trim data
     select: true, // show /unshow 
-    index: true, // veri tabanlarindaki ndex kavrami aha hizli ulasmak icin bir sutuna 
+    index: false, // veri tabanlarindaki ndex kavrami aha hizli ulasmak icin bir sutuna 
+    unique:false , // benzersiz kayit
+    //required:true, 
+    required: [true, 'Error message on un-require']
 
  }
 
