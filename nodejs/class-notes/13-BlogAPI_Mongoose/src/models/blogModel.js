@@ -36,7 +36,7 @@ const mongoose = require('mongoose')
 
 // })
 
-const blogPost = new mongoose.Schema ({
+const blogPostSchema = new mongoose.Schema ({
 
   title: {
     type: String,
@@ -62,3 +62,5 @@ const blogPost = new mongoose.Schema ({
    //updatedAt  otomatik elenecek
 
 }, {collection: 'blogPosts', timestamps:true})
+
+const blogPostModel  = mongoose.model('BlogPost', blogPostSchema)
