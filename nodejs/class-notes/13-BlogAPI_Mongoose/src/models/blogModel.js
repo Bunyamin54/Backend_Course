@@ -11,6 +11,8 @@ const nameSchema = new mongoose.Schema({
 
  //fieldName: String // shorthands Uaing
 
+ // ! Default model tanimlamasi bu sekilde asakidaki dosyaseklinde 
+
  fieldName : {
     type: String,   // veri tipi
     default: null,  // dafault bir  deger atama
@@ -26,4 +28,10 @@ const nameSchema = new mongoose.Schema({
     set: function(data) {return true},  // veri akydederken calistrilacak function 
  }
 
-}, {})
+}, {
+
+   collection: 'collectionName',  // tablo ismi ne olsun
+   timestamps: true,  // created and manage created and updated
+
+
+})
