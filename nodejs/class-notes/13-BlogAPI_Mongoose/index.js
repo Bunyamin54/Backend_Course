@@ -28,10 +28,9 @@ app.all('/', (req, res) => {
 
 
 
-
 /* ------------------------------------------------------- */
 // sarti en asagida kullanmak en son err olmali 
-
+require('./src/dbConnection')
 // erorrHandler
 
 app.use(require('./src/errorHandler'))

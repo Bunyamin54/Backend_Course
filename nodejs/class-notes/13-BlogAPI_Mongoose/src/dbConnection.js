@@ -8,6 +8,6 @@ const mongoose = require('mongoose')
 // const MONGODB = process.env.MONGODB || 'mongodb://localhost:27017/'
 // mongoose.connect(MONGODB) altdaki kisa yolu hali 
 
-mongoose.connect(process.env.MONGODB || 'mongodb://localhost:27017/')
+mongoose.connect(process.env.MONGODB)
     .then(() => console.log(' * DB Connected * '))
     .catch((err) => console.log(' * DB Not Connected * ', err))
