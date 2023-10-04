@@ -63,4 +63,8 @@ const blogPostSchema = new mongoose.Schema ({
 
 }, {collection: 'blogPosts', timestamps:true})
 
-const blogPostModel  = mongoose.model('BlogPost', blogPostSchema)
+// const BlogPostModel  = mongoose.model('BlogPost', blogPostSchema)
+
+module.exports  {
+   // blogCategory:
+    BlogPost: mongoose.model('BlogPost', blogPostSchema) }
