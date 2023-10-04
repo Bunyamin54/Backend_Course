@@ -16,7 +16,7 @@ module.exports = (err, req, res, next) => {
    error: true, 
    message : err.message,
    cause: err.cause,
-   body:req.body
+   body:req.body  // sending json data
 
    })
 
