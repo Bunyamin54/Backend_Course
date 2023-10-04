@@ -16,6 +16,7 @@ const nameSchema = new mongoose.Schema({
     default: null,  // dafault bir  deger atama
     trim:true,  // gelen veriyi trimden gecirme boslugu alma trim data
     select: true, // show /unshow 
+    index: true, // veri tabanlarindaki ndex kavrami aha hizli ulasmak icin bir sutuna 
 
  }
 
