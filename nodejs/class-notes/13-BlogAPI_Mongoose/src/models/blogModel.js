@@ -21,8 +21,9 @@ const nameSchema = new mongoose.Schema({
     //required:true, 
     required: [true, 'Error message '],
     enum: [[0,1,2,3], 'Error-Massage'] , //   Pattern sabitleme sinirlama 
-    validate: [validateFunction, 'Error-Message' ]  // [function(data) {return true}, 'Error-Message']
-
+    validate: [validateFunction, 'Error-Message' ] , // [function(data) {return true}, 'Error-Message']  veriyi filtreden geciren function
+    get: function(data) {return true},  // veri cagirirken calsitrilcak functino 
+    set: function(data) {return true},  // veri akydederken calistrilacak function 
  }
 
 }, {})
