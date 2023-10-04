@@ -1,14 +1,13 @@
 "use strict"
-
-const { default: mongoose } = require("mongoose")
-
 /* -------------------------------------------------------
     EXPRESSJS - BLOG Project with Mongoose
 ------------------------------------------------------- */
 
+const mongoose = require('mongoose')
 
-const  mongoose = require('mongoose')
+// const MONGODB = process.env.MONGODB || 'mongodb://localhost:27017/'
+// mongoose.connect(MONGODB) altdaki kisa yolu hali 
 
-mongoose.connect('mongodb://localhost:27017/')
-.then (()   => console.log('DB connected *'))
-.catch ((err)   => console.log('DB NOT connected *'))
+mongoose.connect(process.env.MONGODB || 'mongodb://localhost:27017/')
+    .then(() => console.log(' * DB Connected * '))
+    .catch((err) => console.log(' * DB Not Connected * ', err))
