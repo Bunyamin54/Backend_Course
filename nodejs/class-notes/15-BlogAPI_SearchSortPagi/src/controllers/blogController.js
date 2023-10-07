@@ -101,18 +101,21 @@ module.exports.BlogPost = {
         // const limit = req.query?.limit || 20
         // let limit = req.query?.limit || (process.env?.PAGE_SIZE || 20)
         // limit = Number(limit)
-        const limit = Number(req.query?.limit || (process.env?.PAGE_SIZE || 20))
+        let limit = Number(req.query?.limit)
+        limit = limit > 0 ? limit : Number(process.env?.PAGE_SIZE || 20)
         console.log('limit', typeof limit, limit)
 
-        let page = Number(req.query?.page || 1) - 1
+        let page = Number(req.query?.page)
+        page = (page > 0 ? page : 1) - 1 // Backend'de sayfaNo her zaman -1'dir.
         console.log('page', typeof page, page)
 
-        const skip = Number(req.query?.skip || (page * limit))
+        let skip = Number(req.query?.skip) // İstenirse url'de ?skip=10 gibi değer gönderilebilir.
+        skip = skip > 0 ? skip : (page * limit)
         console.log('skip', typeof skip, skip)
 
 
 
-        const data = await BlogPost.find( search ).sort( sort )
+        const data = await BlogPost.find( search ).sort( sort ).skip(skip).limit(limit)
         
 
 
