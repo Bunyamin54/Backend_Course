@@ -90,16 +90,29 @@ module.exports.BlogPost = {
         const search = req.query?.search || {}
         // console.log(search)
         // https://www.mongodb.com/docs/manual/reference/operator/query/regex/
-        for (let key in search) search[key] = { $regex: search[key], $options: 'i' }
+        for (let key in search) search[key] = { $regex: search[key], $options: 'i' } // i: case Insensitive
         // console.log(search)
 
         // SORTING: URL?sort[key1]=1&sort[key2]=-1 (1: ASC, -1:DESC)
         const sort = req.query?.sort || {}
-        console.log(sort)
+        // console.log(sort)
+
+        // PAGINATION: URL?page=1&limit=10
+        // const limit = req.query?.limit || 20
+        // let limit = req.query?.limit || (process.env?.PAGE_SIZE || 20)
+        // limit = Number(limit)
+        const limit = Number(req.query?.limit || (process.env?.PAGE_SIZE || 20))
+        console.log('limit', typeof limit, limit)
+
+        let page = Number(req.query?.page || 1) - 1
+        console.log('page', typeof page, page)
+
+        const skip = Number(req.query?.skip || (page * limit))
+        console.log('skip', typeof skip, skip)
 
 
 
-        const data = await BlogPost.find( search ).sort( sort ) // i: case Insensitive
+        const data = await BlogPost.find( search ).sort( sort )
         
 
 
