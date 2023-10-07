@@ -43,6 +43,7 @@ app.use('/user', require('./src/routes/userRoute'))
 app.use('/blog', require('./src/routes/blogRoute'))
 
 /* ------------------------------------------------------- */
+
 // Synchronization:
 // require('./src/sync')()
 
