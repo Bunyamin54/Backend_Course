@@ -84,15 +84,23 @@ module.exports.BlogPost = {
 
     list: async (req, res) => {
 
-        //Searching & Sorting & Pagination :
+        // Searching & Sorting & Pagination:
 
-        // SEARCHING: URL?search [key]= value&search[key2]=value2   
-
+        // SEARCHING: URL?search[key1]=value1&search[key2]=value2
         const search = req.query?.search || {}
-
+        console.log(search)
+        // https://www.mongodb.com/docs/manual/reference/operator/query/regex/
+        for (let key in search) search[key] = { $regex: search[key], $options: 'i' }
         console.log(search)
 
-        const data = await BlogPost.find().populate('blogCategoryId') // get Primary Data
+        const data = await BlogPost.find( search ) // i: case Insensitive
+        
+
+
+
+
+
+        // const data = await BlogPost.find().populate('blogCategoryId') // get Primary Data
 
         res.status(200).send({
             error: false,
