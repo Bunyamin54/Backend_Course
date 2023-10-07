@@ -88,7 +88,9 @@ module.exports.BlogPost = {
 
         // SEARCHING: URL?search [key]= value&search[key2]=value2   
 
+        const search = req.query?.search || {}
 
+        console.log(search)
 
         const data = await BlogPost.find().populate('blogCategoryId') // get Primary Data
 
