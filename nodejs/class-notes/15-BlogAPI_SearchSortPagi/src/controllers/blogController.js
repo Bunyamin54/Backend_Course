@@ -88,12 +88,18 @@ module.exports.BlogPost = {
 
         // SEARCHING: URL?search[key1]=value1&search[key2]=value2
         const search = req.query?.search || {}
-        console.log(search)
+        // console.log(search)
         // https://www.mongodb.com/docs/manual/reference/operator/query/regex/
         for (let key in search) search[key] = { $regex: search[key], $options: 'i' }
-        console.log(search)
+        // console.log(search)
 
-        const data = await BlogPost.find( search ) // i: case Insensitive
+        // SORTING: URL?sort[key1]=1&sort[key2]=-1 (1: ASC, -1:DESC)
+        const sort = req.query?.sort || {}
+        console.log(sort)
+
+
+
+        const data = await BlogPost.find( search ).sort( sort ) // i: case Insensitive
         
 
 
