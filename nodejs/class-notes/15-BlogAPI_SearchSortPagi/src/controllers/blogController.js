@@ -20,7 +20,8 @@ module.exports.BlogCategory = {
 
     list: async (req, res) => {
 
-        const data = await BlogCategory.find()
+        // const data = await BlogCategory.find()
+        const data = await req.getModelList(BlogCategory)
 
         res.status(200).send({
             error: false,
@@ -84,6 +85,7 @@ module.exports.BlogPost = {
 
     list: async (req, res) => {
 
+        /*
         // Searching & Sorting & Pagination:
 
         // SEARCHING: URL?search[key1]=value1&search[key2]=value2
@@ -103,26 +105,22 @@ module.exports.BlogPost = {
         // limit = Number(limit)
         let limit = Number(req.query?.limit)
         limit = limit > 0 ? limit : Number(process.env?.PAGE_SIZE || 20)
-        console.log('limit', typeof limit, limit)
+        // console.log('limit', typeof limit, limit)
 
         let page = Number(req.query?.page)
         page = (page > 0 ? page : 1) - 1 // Backend'de sayfaNo her zaman -1'dir.
-        console.log('page', typeof page, page)
+        // console.log('page', typeof page, page)
 
         let skip = Number(req.query?.skip) // İstenirse url'de ?skip=10 gibi değer gönderilebilir.
         skip = skip > 0 ? skip : (page * limit)
-        console.log('skip', typeof skip, skip)
+        // console.log('skip', typeof skip, skip)
 
-
-
-        const data = await BlogPost.find( search ).sort( sort ).skip(skip).limit(limit)
-        
-
-
-
-
-
+        // RUN:
         // const data = await BlogPost.find().populate('blogCategoryId') // get Primary Data
+        const data = await BlogPost.find(search).sort(sort).skip(skip).limit(limit).populate('blogCategoryId')
+        */
+
+        const data = await req.getModelList(BlogPost, 'blogCategoryId')
 
         res.status(200).send({
             error: false,
