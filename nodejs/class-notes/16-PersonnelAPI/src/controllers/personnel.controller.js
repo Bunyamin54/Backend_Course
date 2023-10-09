@@ -75,10 +75,9 @@ module.exports = {
         })
     },
 
+    // LOGIN & LOGOUT
 
-     // LOGIN & LOGOUT
-
-     login: async (req, res) => {
+    login: async (req, res) => {
 
         const { username, password } = req.body
 
