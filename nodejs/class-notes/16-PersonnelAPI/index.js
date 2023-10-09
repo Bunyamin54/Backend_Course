@@ -43,13 +43,6 @@ app.use(require('./src/middlewares/findSearchSortPage'))
 /* ------------------------------------------------------- */
 // Routes:
 
-// departments
-
-
- app.use('/departments', require('./src/routes/department.router'))
-
-
- 
 // HomePath:
 app.all('/', (req, res) => {
     res.send({
@@ -57,6 +50,11 @@ app.all('/', (req, res) => {
         message: 'Welcome to PERSONNEL API',
     })
 })
+
+// /departments
+app.use('/departments', require('./src/routes/department.router'))
+// /personnels
+app.use('/personnels', require('./src/routes/personnel.router'))
 
 /* ------------------------------------------------------- */
 
