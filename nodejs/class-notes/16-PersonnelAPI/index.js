@@ -40,16 +40,6 @@ app.use(require('cookie-session')({ secret: process.env.SECRET_KEY }))
 // res.getModelList():
 app.use(require('./src/middlewares/findSearchSortPage'))
 
-
-//Login -Logout Middleware
-
-app.use(async( req, res, next) =>{
-
-
-    
-})
-
-
 /* ------------------------------------------------------- */
 // Routes:
 
