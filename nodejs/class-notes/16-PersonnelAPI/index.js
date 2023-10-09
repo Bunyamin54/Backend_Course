@@ -43,7 +43,11 @@ app.use(require('./src/middlewares/findSearchSortPage'))
 
 //Login -Logout Middleware
 
+app.use(async( req, res, next) =>{
 
+
+    
+})
 
 
 /* ------------------------------------------------------- */
