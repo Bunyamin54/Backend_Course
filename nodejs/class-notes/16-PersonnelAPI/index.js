@@ -12,8 +12,13 @@ const express = require('express')
 const app = express()
 
 /* ------------------------------------------------------- */
+ // Required Modules
+require('dotenv').config()
+const PORT = process.env?.PORT || 8000
 
+//asyncErrors to errorhandler
 
+require('express-async-errors')
 
 // continue from here...
 
