@@ -72,7 +72,10 @@ module.exports = {
     },
 
     logout: async (req, res) => {
-
+        res.send({
+            error: false,
+            message: 'No need any doing for logout. You must deleted Bearer Token from your browser.'
+        })
     },
 
 }
