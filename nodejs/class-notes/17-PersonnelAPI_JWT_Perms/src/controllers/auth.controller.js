@@ -5,7 +5,7 @@
 ------------------------------------*/
 // JWT
 // NPM I JSONWEBTOKEN
-
+const jwt = require('jsonwebtoken')
  const Personnel = require ('../models/personnel.model')
 module.exports = {
 
@@ -16,6 +16,7 @@ module.exports = {
      if () username && password)  {
 
         const user = await Personnel.findOne ({username, password })
+        
 
           if (user)  {
 
@@ -31,14 +32,17 @@ module.exports = {
                     isAdmin: user.isAdmin,
                     isLead: user.isLead
                 }
-                 const refreshData = {
 
-                   username: user.username,
+
+                  const accessToken = jwt.sign(accessData,  process.env.SECRET_KEY,  {expiresIn: '30m'})
+                 
+                 
+                  const refreshData = {
+                    username: user.username,
                    password: user.password
+                 } 
 
-
-
-                 }
+                 const refreshToken = jwt.sign(refreshData, process.env.REFRESH_KEY , { expiresIn: '3d'} )
                   
             } else{
 
