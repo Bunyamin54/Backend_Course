@@ -75,6 +75,8 @@ app.all('/', (req, res) => {
 })
 
 // /departments
+app.use('/auth', require('./src/routes/auth.router'))
+
 app.use('/departments', require('./src/routes/department.router'))
 // /personnels
 app.use('/personnels', require('./src/routes/personnel.router'))
@@ -89,4 +91,4 @@ app.listen(PORT, () => console.log('http://127.0.0.1:' + PORT))
 
 /* ------------------------------------------------------- */
 // Syncronization (must be in commentLine):
-// require('./src/helpers/sync')()
+require('./src/helpers/sync')()
