@@ -25,9 +25,13 @@ module.exports = {
 
                 res.errorStatusCode = 401
                     throw new Error('This account is not active.')
-            }
+            } 
 
 
+          } else {
+
+            res.errorStatusCode = 401
+                    throw new Error('Wrong username or password.')
           }
      }
 
