@@ -107,12 +107,23 @@ app.use(require('./src/middlewares/findSearchSortPage'))
 // })
 app.use(require('./src/middlewares/authentication'))
 
-// Swagger-UI Middleware:
+// Documentation Middlewares:
+// Swagger-UI:
 // npm i swagger-ui-express
 const swaggerUi = require('swagger-ui-express')
 const swaggerJson = require('./swagger.json')
 // Parse/Run swagger.json and publish on any URL:
 app.use('/docs/swagger', swaggerUi.serve, swaggerUi.setup(swaggerJson, { swaggerOptions: { persistAuthorization: true } }))
+// Redoc:
+// npm i redoc-express
+const redoc = require('redoc-express')
+app.use('/docs/json', (req, res) => {
+    res.sendFile('swagger.json', { root: '.' })
+})
+app.use('/docs/redoc', redoc({
+    specUrl: '/docs/json',
+    title: 'API Docs'
+}))
 
 /* ------------------------------------------------------- */
 // Routes:
@@ -122,6 +133,14 @@ app.all('/', (req, res) => {
     res.send({
         error: false,
         message: 'Welcome to PERSONNEL API',
+        api: {
+            documents: {
+                json: '/docs/json',
+                swagger: '/docs/swagger',
+                redoc: '/docs/redoc',
+            },
+            contact: 'clarusway.com'
+        },
         // session: req.session,
         isLogin: req.isLogin,
         user: req.user
