@@ -1,11 +1,13 @@
 {
   "name": "19-pizzaapi",
   "version": "1.0.0",
-  "description": "pizzaapi",
+  "description": "### ERD:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon",
+    "debug": "DEBUG=* nodemon"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
