@@ -3,6 +3,8 @@
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
 /*
+    $ mkdir logs
+    $ cp .env-sample .env
     $ npm init -y
     $ npm i express dotenv mongoose express-async-errors
     $ npm i jsonwebtoken morgan
@@ -47,16 +49,19 @@ app.all('/', (req, res) => {
     res.send({
         error: false,
         message: 'Welcome to PIZZA API',
-        isLogin: req.isLogin,
-        user: req.user
     })
 })
 
- // user
-
-
- app.use('/users', require ('./src/routes/user'))
-
+// auth:
+app.use('/auth', require('./src/routes/auth'))
+// user:
+app.use('/users', require('./src/routes/user'))
+// order:
+app.use('/orders', require('./src/routes/order'))
+// pizza:
+app.use('/pizzas', require('./src/routes/pizza'))
+// topping:
+app.use('/toppings', require('./src/routes/topping'))
 
 /* ------------------------------------------------------- */
 

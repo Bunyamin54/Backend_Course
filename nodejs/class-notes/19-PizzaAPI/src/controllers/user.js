@@ -26,7 +26,7 @@ module.exports = {
 
         res.status(200).send({
             error: false,
-            details: res.getModelListDetails(User),
+            details: await res.getModelListDetails(User),
             data
         })
     },
@@ -51,8 +51,8 @@ module.exports = {
             #swagger.summary = "Get Single User"
         */
 
-            const data =await User.findOne({ _id: req.params.id})
-            
+        const data = await User.findOne({ _id: req.params.id })
+
         res.status(200).send({
             error: false,
             data
@@ -66,15 +66,13 @@ module.exports = {
             #swagger.summary = "Update User"
         */
 
+        const data = await User.updateOne({ _id: req.params.id }, req.body)
 
-            const data = await User.updateOne({_id: req.params.id} , req.body)
-
-            res.status(202).send({
-                error: false,
-                data,
-                new: await User.findOne({ _id: req.params.id})
-            })
-    
+        res.status(202).send({
+            error: false,
+            data,
+            new: await User.findOne({ _id: req.params.id })
+        })
 
     },
 
@@ -84,13 +82,12 @@ module.exports = {
             #swagger.summary = "Delete User"
         */
 
-            const data = await User.deleteOne({ _id: req.params.id})
+        const data = await User.deleteOne({ _id: req.params.id })
 
-            res.status(data.deletedCount ? 204 : 404 ).send({
-                error: !data.deletedCount,
-                data
-            })
+        res.status(data.deletedCount ? 204 : 404).send({
+            error: !data.deletedCount,
+            data
+        })
 
     },
-
 }

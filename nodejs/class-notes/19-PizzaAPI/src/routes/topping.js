@@ -2,23 +2,23 @@
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
-const { mongoose } = require('../configs/dbConnection')
+const router = require('express').Router()
 /* ------------------------------------------------------- */
-// Topping Model:
+// routes/topping:
 
-const ToppingSchema = new mongoose.Schema({
+const topping = require('../controllers/topping')
 
-    name: {
-        type: String,
-        trim: true,
-        required: true,
-        unique: true,
-    },
+// URL: /toppings
 
-}, {
-    collection: 'toppings',
-    timestamps: true
-})
+router.route('/')
+    .get(topping.list)
+    .post(topping.create)
+
+router.route('/:id')
+    .get(topping.read)
+    .put(topping.update)
+    .patch(topping.update)
+    .delete(topping.delete)
 
 /* ------------------------------------------------------- */
-module.exports = mongoose.model('Topping', ToppingSchema)
+module.exports = router

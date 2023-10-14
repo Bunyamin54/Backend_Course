@@ -4,58 +4,51 @@
 ------------------------------------------------------- */
 const { mongoose } = require('../configs/dbConnection')
 /* ------------------------------------------------------- */
-
-// User Model :
+// User Model:
 
 const passwordEncrypt = require('../helpers/passwordEncrypt')
 
-const UserSchema = new mongoose.Schema ({
+const UserSchema = new mongoose.Schema({
 
-  userName = {
-    type: String,
-    trim: true,
-    required: true,
-    unique:true
+    username: {
+        type: String,
+        trim: true,
+        required: true,
+        unique: true,
+    },
 
-  },
+    password: {
+        type: String,
+        trim: true,
+        required: true,
+        set: (password) => passwordEncrypt(password)
+    },
 
-  password  : {
+    email: {
+        type: String,
+        trim: true,
+        required: [true, 'Email field must be required'],
+        unique: [true, 'There is this email. Email field must be unique'],
+        validate: [
+            (email) => email.includes('@') && email.includes('.'),
+            'Email type is not correct.'
+        ]
+    },
 
-    type: String,
-    trim: true,
-    required: true,
-     set:(password)  => passwordEncrypt(password)
-  },
+    isActive: {
+        type: Boolean,
+        default: true,
+    },
 
+    isAdmin: {
+        type: Boolean,
+        default: false,
+    },
 
-  email: {
-    type: String,
-    trim: true,
-    required: [true, 'Email field must be required'],
-    unique: [true, 'There is this email. Email field must be unique'],
-    validate: [
-        (email) => email.includes('@') && email.includes('.'),
-        'Email type is not correct.'
-    ]
-},
-
-isActive: {
-    type: Boolean,
-    default: true,
-},
-
-isAdmin: {
-    type: Boolean,
-    default: false,
-},
-    
-   
-    
- }, {
-   
-  
+}, {
     collection: 'users',
-    timestamps:true
-  })
+    timestamps: true
+})
 
-  module.exports = mongoose.model('User'. UserSchema)
+/* ------------------------------------------------------- */
+module.exports = mongoose.model('User', UserSchema)
