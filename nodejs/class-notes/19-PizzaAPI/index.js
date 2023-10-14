@@ -1,8 +1,9 @@
-"use strict"   // Brni kurallara uymaya zorla
+"use strict"
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
 /*
+    $ npm init -y
     $ npm i express dotenv mongoose express-async-errors
     $ npm i jsonwebtoken morgan
 */
@@ -28,16 +29,19 @@ dbConnection()
 
 /* ------------------------------------------------------- */
 // Middlewares:
-//AcceptJson
-  app.use(express.json())
 
-  // Run Logger:
+// Accept JSON:
+app.use(express.json())
+
+// Run Logger:
 app.use(require('./src/middlewares/logger'))
 
-//   res.getModelList():
-  app.use(require('./src/middlewares/findSearchSortPage'))
+// res.getModelList():
+app.use(require('./src/middlewares/findSearchSortPage'))
+
 /* ------------------------------------------------------- */
 // Routes:
+
 // HomePath:
 app.all('/', (req, res) => {
     res.send({
