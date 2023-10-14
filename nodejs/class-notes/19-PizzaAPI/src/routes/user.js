@@ -3,7 +3,29 @@
     NODEJS EXPRESS | CLARUSWAY FullStack Team
 ------------------------------------------------------- */
 const router = require('express').Router()
+const { route } = require('express/lib/router')
 /* ------------------------------------------------------- */
 
+
+
+const user = require ('../controllers/user')
+
+
+//URL: / users
+
+
+router.route('/')
+
+
+  .get(user.list)
+  .post(user.create)
+
+
+
+  router.route('/:id')
+  .get(user.read)
+  .put(user.update)
+  .path(user.update)
+  .delete(user.delete)
 /* ------------------------------------------------------- */
 module.exports = router
