@@ -1,6 +1,14 @@
 "use strict"
 /* -------------------------------------------------------
     NODEJS EXPRESS | CLARUSWAY FullStack Team
+------------------------------------------------------- *
+{
+  "userId": "652d7681508462fafafa01a2",
+  "pizzaId": "652d76c5508462fafafa01b0",
+  "size": "Small",
+  "quantity": 1,
+  "price": 99.99
+}
 ------------------------------------------------------- */
 // Order Controller:
 
@@ -23,7 +31,11 @@ module.exports = {
             `
         */
 
-        const data = await res.getModelList(Order)
+        // const data = await res.getModelList(Order, {}, ['userId', 'pizzaId'])
+        const data = await res.getModelList(Order, {}, [
+            'userId',
+            { path: 'pizzaId', populate: 'toppings' }
+        ])
 
         res.status(200).send({
             error: false,
@@ -41,7 +53,7 @@ module.exports = {
         // Calculatings:
         req.body.quantity = req.body?.quantity || 1 // default: 1
         if (!req.body?.price) {
-            const dataPizza = await Pizza.findOne({ _id: req.body.pizzaId })
+            const dataPizza = await Pizza.findOne({ _id: req.body.pizzaId }, { _id: 0, price: 1 })
             req.body.price = dataPizza.price
         }
         req.body.totalPrice = req.body.price * req.body.quantity
@@ -60,7 +72,10 @@ module.exports = {
             #swagger.summary = "Get Single Order"
         */
 
-        const data = await Order.findOne({ _id: req.params.id })
+        const data = await Order.findOne({ _id: req.params.id }).populate([
+            'userId',
+            { path: 'pizzaId', populate: 'toppings' }
+        ])
 
         res.status(200).send({
             error: false,
@@ -78,7 +93,7 @@ module.exports = {
         // Calculatings:
         req.body.quantity = req.body?.quantity || 1 // default: 1
         if (!req.body?.price) {
-            const dataOrder = await Order.findOne({ _id: req.params.id })
+            const dataOrder = await Order.findOne({ _id: req.params.id }, { _id: 0, price: 1 })
             req.body.price = dataOrder.price
         }
         req.body.totalPrice = req.body.price * req.body.quantity
