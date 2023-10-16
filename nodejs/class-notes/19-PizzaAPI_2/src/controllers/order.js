@@ -4,6 +4,7 @@
 ------------------------------------------------------- */
 // Order Controller:
 
+const Pizza = require('../models/pizza')
 const Order = require('../models/order')
 
 module.exports = {
@@ -37,6 +38,14 @@ module.exports = {
             #swagger.summary = "Create Order"
         */
 
+        // Calculatings:
+        req.body.quantity = req.body?.quantity || 1 // default: 1
+        if (!req.body?.price) {
+            const dataPizza = await Pizza.findOne({ _id: req.body.pizzaId })
+            req.body.price = dataPizza.price
+        }
+        req.body.totalPrice = req.body.price * req.body.quantity
+
         const data = await Order.create(req.body)
 
         res.status(201).send({
@@ -65,6 +74,14 @@ module.exports = {
             #swagger.tags = ["Orders"]
             #swagger.summary = "Update Order"
         */
+
+        // Calculatings:
+        req.body.quantity = req.body?.quantity || 1 // default: 1
+        if (!req.body?.price) {
+            const dataOrder = await Order.findOne({ _id: req.params.id })
+            req.body.price = dataOrder.price
+        }
+        req.body.totalPrice = req.body.price * req.body.quantity
 
         const data = await Order.updateOne({ _id: req.params.id }, req.body)
 
