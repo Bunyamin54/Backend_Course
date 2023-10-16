@@ -4,25 +4,22 @@
 ------------------------------------------------------- */
 const router = require('express').Router()
 /* ------------------------------------------------------- */
-// routes/pizza:
+// routes/user:
 
 const permissions = require('../middlewares/permissions')
-const pizza = require('../controllers/pizza')
+const user = require('../controllers/user')
 
-// URL: /pizzas
+// URL: /users
 
 router.route('/')
-    .get(pizza.list)
-    .post(permissions.isAdmin, pizza.create)
+    .get(permissions.isAdmin, user.list)
+    .post(user.create)
 
 router.route('/:id')
-    .get(pizza.read)
-    .put(permissions.isAdmin, pizza.update)
-    .patch(permissions.isAdmin, pizza.update)
-    .delete(permissions.isAdmin, pizza.delete)
-
-router.put('/:id/pushToppings', permissions.isAdmin, pizza.pushToppings)
-router.put('/:id/pullToppings', permissions.isAdmin, pizza.pullToppings)
+    .get(permissions.isLogin, user.read)
+    .put(permissions.isLogin, user.update)
+    .patch(permissions.isLogin, user.update)
+    .delete(permissions.isAdmin, user.delete)
 
 /* ------------------------------------------------------- */
 module.exports = router
