@@ -51,7 +51,7 @@ app.all('/', (req, res) => {
 })
  
 
-app.user('/', required('./src/routes/index.js'))
+app.use('/', require('./src/routes/'))
 // // auth:
 // app.use('/auth', require('./src/routes/auth'))
 // // document:
