@@ -49,15 +49,17 @@ app.all('/', (req, res) => {
         user: req.user
     })
 })
+ 
 
-// auth:
-app.use('/auth', require('./src/routes/auth'))
-// document:
-app.use('/documents', require('./src/routes/document'))
-app.use('/flights', require('./src/routes/flight'))
-app.use('/passengers', require('./src/routes/passenger'))
-app.use('/reservations', require('./src/routes/reservation'))
-app.use('/users', require('./src/routes/user'))
+app.user('/', required('./src/routes/index.js'))
+// // auth:
+// app.use('/auth', require('./src/routes/auth'))
+// // document:
+// app.use('/documents', require('./src/routes/document'))
+// app.use('/flights', require('./src/routes/flight'))
+// app.use('/passengers', require('./src/routes/passenger'))
+// app.use('/reservations', require('./src/routes/reservation'))
+// app.use('/users', require('./src/routes/user'))
 /* ------------------------------------------------------- */
 
 // errorHandler:
