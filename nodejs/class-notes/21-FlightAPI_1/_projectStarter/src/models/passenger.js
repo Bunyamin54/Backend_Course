@@ -47,7 +47,13 @@ const PassengerSchema = new mongoose.Schema({
         ]
     },
 
-         
+    createdId: {
+    
+        type:mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true,
+        
+       },
 
 }, { collection: 'passengers', timestamps: true })
 
