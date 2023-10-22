@@ -29,6 +29,7 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         trim: true,
+        // select: false,
         required: true,
         set: (password) => passwordEncrypt(password)
     },
