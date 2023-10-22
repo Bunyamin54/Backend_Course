@@ -16,6 +16,38 @@ const { mongoose } = require('../configs/dbConnection')
 
 const PassengerSchema = new mongoose.Schema({
 
+     firstName: {
+      type: String,
+      trim: true,
+      required:true,
+     },
+
+     lastName: {
+        type: String,
+        trim: true,
+        required:true,
+       },
+
+
+       gender: {
+
+           type:String,
+           enum: [null , 'M', 'F'],
+           default: null
+       },
+  
+       email: {
+        type: String,
+        trim: true,
+        required: [true, 'Email field must be required'],
+        unique: [true, 'There is this email. Email field must be unique'],
+        validate: [
+            (email) => email.includes('@') && email.includes('.'),
+            'Email type is not correct.'
+        ]
+    },
+
+         
 
 }, { collection: 'passengers', timestamps: true })
 
