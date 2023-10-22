@@ -55,6 +55,7 @@ app.use('/auth', require('./src/routes/auth'))
 // document:
 app.use('/documents', require('./src/routes/document'))
 app.use('/flights', require('./src/routes/flight'))
+app.use('/passengers', require('./src/routes/passenger'))
 app.use('/users', require('./src/routes/user'))
 /* ------------------------------------------------------- */
 
