@@ -4,4 +4,7 @@ From node:20.09.0-alpine
 # Calisma Alani 
 WORKDIR / app
 
-#Dosyalari Aktar : Copy from to 
+#Dosyalari Aktar : Copy local inImage
+
+# COPY hello.js / app
+# kisa yolu COPY . .  tum dosyalari alir wordirection app in icine atar 
