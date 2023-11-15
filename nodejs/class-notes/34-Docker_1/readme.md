@@ -1,4 +1,4 @@
-# Docker-1
+<!-- # Docker-1
 
 ## Server Systems
 
@@ -50,3 +50,10 @@
     $ docker build --help
 
     $ docker search <imagename> # search on dockerhub
+
+
+##Docker Commands
+
+#Image build
+
+$ docker build -->

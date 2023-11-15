@@ -1,16 +1,11 @@
-# Altyapi kurma (from dockerHub)
+# Altyapı (from dockerHub):
+FROM node:20.9.0-alpine
+# Çalışma Alanı:
+WORKDIR /app
+# Dosyaları Aktar: COPY local inImage
+# COPY hello.js /app
+COPY . .
 
-From node:20.09.0-alpine
-# Calisma Alani 
-WORKDIR / app
-
-#Dosyalari Aktar : Copy local inImage
-
-# COPY hello.js / app
-# kisa yolu COPY . .  tum dosyalari alir wordirection app in icine atar 
- COPY . .
-
-
-# After build (when image to container)
-
+# After build (when image to container):
+# docker run imagename
 CMD node hello.js
