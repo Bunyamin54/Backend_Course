@@ -1,3 +1,7 @@
-# Altyapi kurma
+# Altyapi kurma (from dockerHub)
 
 From node:20.09.0-alpine
+# Calisma Alani 
+WORKDIR / app
+
+#Dosyalari Aktar : Copy from to 
