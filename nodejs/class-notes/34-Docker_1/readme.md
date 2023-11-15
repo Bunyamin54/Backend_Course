@@ -71,4 +71,28 @@
     # Image tag ekle/değiştir:
     $ docker tag <imagename> <newimagename>
 
+    # Image'den Container aç:
+    $ docker run <imagename>
+    # Image'den Container aç ve container'a isim ver:
+    $ docker run --name <containername> <imagename>
+
+    # Container'leri listele:
+    $ docker container ls
+    $ docker ps
+    # Container'leri listele (tümü):
+    $ docker container ls -a
+    $ docker ps -a
+    # Container başlat/durdur:
+    docker start|stop <containername>
+    # Container sil:
+    $ docker rm <containername>
+    $ docker rm <containername> -f
+    # Container'leri sil (kullanılmayanlar):
+    $ docker container prune -f
+
+    # Interaktif modda aç:
+    $ docker run -it <imagename> sh
+    # Interaktif moddan çık:
+    $ exit
+
 ```
