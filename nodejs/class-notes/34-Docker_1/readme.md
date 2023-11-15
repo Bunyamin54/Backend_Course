@@ -33,3 +33,20 @@
   * Default portlar 80 443 -> https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
   * http -> 80 * http://clarusway.com == http://clarusway.com:80
   * https -> 443 * https://clarusway.com == https://clarusway.com:443 (need SSL)
+
+## DOCKER
+
+* https://docs.docker.com/get-started/docker_cheatsheet.pdf
+
+```sh
+
+    $ docker --version
+    $ docker version
+
+    $ docker info
+    
+    $ docker --help
+    $ docker help
+    $ docker build --help
+
+    $ docker search <imagename> # search on dockerhub
