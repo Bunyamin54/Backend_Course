@@ -1,46 +1,46 @@
 <pre>
-<h2>OurWinch-Nøsted-App (GitHub Repository Root)</h2>
+ <h2> OurWinch-Nøsted-App (GitHub Repository Root) <h2>
 
-│   ├── <h2>Root</h2>             
-│   │   ├── <h2>CSS</h2>         
+│   ├── ## <h3>Root<h3>         
+│   │   ├── # CSS         
 │   │   │   ├── **Layout.css** 
 │   │   ├── **Image**         
 
-<h2>Controllers</h2>      
-│   ├── **AccountControllers** 
-│   ├── **CheckListControllers** 
-│   ├── **DashboardControllers** 
+│   ├── ## Controllers      
+│   │   ├── **AccountControllers** 
+│   │   ├── **CheckListControllers** 
+│   │   ├── **DashboardControllers** 
 
-<h2>Data</h2>              
-│   ├── **AppDbContext**   
+│   ├── ##Data              
+│   │   ├── **AppDbContext**   
 
-<h2>Migrations</h2>        
+│   ├── ##Migrations        
 
-<h2>Models</h2>        
-│   ├── **AccountModel**  
-│   ├── **ChecklistModel**
-│   ├── **DashboardModel**
-│   ├── **ErrorViewModel**
+│   ├── ##Models        
+│   │   ├── **AccountModel**  
+│   │   ├── **ChecklistModel**
+│   │   ├── **DashboardModel**
+│   │   ├── **ErrorViewModel**
 
-<h2>Services</h2>         
+│   ├── ##Services         
 
-<h2>Views</h2>           
-│   ├── **Account**       
-│   ├── **Dashboard**     
-│   ├── **Electro**       
-│   ├── **FunksjonsTest** 
-│   ├── **Hydrolisk**     
-│   ├── **Mechanical**
-│   ├── **Roles**         
-│   ├── **ServiceOrder**  
-│   ├── **ServiceSkjema** 
-│   ├── **Trykk**         
+│   ├── ##Views           
+│   │   ├── **Account**       
+│   │   ├── **Dashboard**     
+│   │   ├── **Electro**       
+│   │   ├── **FunksjonsTest** 
+│   │   ├── **Hydrolisk**     
+│   │   ├── **Mechanical**
+│   │   ├── **Roles**         
+│   │   ├── **ServiceOrder**  
+│   │   ├── **ServiceSkjema** 
+│   │   ├── **Trykk**         
 
-<h2>Shared</h2>         
-│   ├── **Layout.cshtml** 
-│   ├── **appsettings.json**
+│   ├── ##Shared         
+│   │   ├── **Layout.cshtml** 
+│   │   ├── **appsettings.json**
 
-<h2>DockerFile</h2>         
+│   ├── ##DockerFile         
 
-<h2>Program.cs</h2>
+│   ├── ##Program.cs
 </pre>
