@@ -1,31 +1,29 @@
-```
+### **OurWinch-Nøsted-App (GitHub Repository Root)**
 
-### OurWinch-Nøsted-App (GitHub Repository Root)
-
-│   ├── ## Root             
-│   │   ├── # CSS         
+│   ├── **Root**             
+│   │   ├── **CSS**         
 │   │   │   ├── **Layout.css** 
 │   │   ├── **Image**         
 
-│   ├── ## Controllers      
+│   ├── **Controllers**      
 │   │   ├── **AccountControllers** 
 │   │   ├── **CheckListControllers** 
 │   │   ├── **DashboardControllers** 
 
-│   ├── ##Data              
+│   ├── **Data**              
 │   │   ├── **AppDbContext**   
 
-│   ├── ##Migrations        
+│   ├── **Migrations**        
 
-│   ├── ##Models        
+│   ├── **Models**        
 │   │   ├── **AccountModel**  
 │   │   ├── **ChecklistModel**
 │   │   ├── **DashboardModel**
 │   │   ├── **ErrorViewModel**
 
-│   ├── ##Services         
+│   ├── **Services**         
 
-│   ├── ##Views           
+│   ├── **Views**           
 │   │   ├── **Account**       
 │   │   ├── **Dashboard**     
 │   │   ├── **Electro**       
@@ -37,11 +35,10 @@
 │   │   ├── **ServiceSkjema** 
 │   │   ├── **Trykk**         
 
-│   ├── ##Shared         
+│   ├── **Shared**         
 │   │   ├── **Layout.cshtml** 
 │   │   ├── **appsettings.json**
 
-│   ├── ##DockerFile         
+│   ├── **DockerFile**         
 
-│   ├── ##Program.cs
-```
+│   ├── **Program.cs**
