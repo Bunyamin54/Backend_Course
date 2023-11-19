@@ -1,45 +1,47 @@
-OurWinch-Nøsted-App (GitHub Repository Root)
-│ ├── ## Root
-│ │ ├── # CSS
-│ │ │ ├── Layout.css
-│ │ ├── Image
+```
 
-│ ├── ## Controllers
-│ │ ├── AccountControllers
-│ │ ├── CheckListControllers
-│ │ ├── DashboardControllers
+### OurWinch-Nøsted-App (GitHub Repository Root)
 
-│ ├── ##Data
-│ │ ├── AppDbContext
+│   ├── ## Root             
+│   │   ├── # CSS         
+│   │   │   ├── **Layout.css** 
+│   │   ├── **Image**         
 
-│ ├── ##Migrations
+│   ├── ## Controllers      
+│   │   ├── **AccountControllers** 
+│   │   ├── **CheckListControllers** 
+│   │   ├── **DashboardControllers** 
 
-│ ├── ##Models
-│ │ ├── AccountModel
-│ │ ├── ChecklistModel
-│ │ ├── DashboardModel
-│ │ ├── ErrorViewModel
+│   ├── ##Data              
+│   │   ├── **AppDbContext**   
 
-│ ├── ##Services
+│   ├── ##Migrations        
 
-│ ├── ##Views
-│ │ ├── Account
-│ │ ├── Dashboard
-│ │ ├── Electro
-│ │ ├── FunksjonsTest
-│ │ ├── Hydrolisk
-│ │ ├── Mechanical
-│ │ ├── Roles
-│ │ ├── ServiceOrder
-│ │ ├── ServiceSkjema
-│ │ ├── Trykk
+│   ├── ##Models        
+│   │   ├── **AccountModel**  
+│   │   ├── **ChecklistModel**
+│   │   ├── **DashboardModel**
+│   │   ├── **ErrorViewModel**
 
-│ ├── ##Shared
-│ │ ├── Layout.cshtml
-│ │ ├── appsettings.json
+│   ├── ##Services         
 
-│ ├── ##DockerFile
+│   ├── ##Views           
+│   │   ├── **Account**       
+│   │   ├── **Dashboard**     
+│   │   ├── **Electro**       
+│   │   ├── **FunksjonsTest** 
+│   │   ├── **Hydrolisk**     
+│   │   ├── **Mechanical**
+│   │   ├── **Roles**         
+│   │   ├── **ServiceOrder**  
+│   │   ├── **ServiceSkjema** 
+│   │   ├── **Trykk**         
 
-│ ├── ##Program.cs
+│   ├── ##Shared         
+│   │   ├── **Layout.cshtml** 
+│   │   ├── **appsettings.json**
 
-vbnet
+│   ├── ##DockerFile         
+
+│   ├── ##Program.cs
+```
