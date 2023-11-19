@@ -1,46 +1,44 @@
-<pre>
- <h2> OurWinch-Nøsted-App (GitHub Repository Root) <h2>
+### <span class="main-title">OurWinch-Nøsted-App (GitHub Repository Root)</span>
 
-│   ├── ## <h3>Root<h3>         
-│   │   ├── # CSS         
+│   ├── <span class="sub-title">Root</span>             
+│   │   ├── <span class="sub-sub-title">CSS</span>         
 │   │   │   ├── **Layout.css** 
 │   │   ├── **Image**         
 
-│   ├── ## Controllers      
-│   │   ├── **AccountControllers** 
-│   │   ├── **CheckListControllers** 
-│   │   ├── **DashboardControllers** 
+### <span class="sub-title">Controllers</span>      
+│   ├── **AccountControllers** 
+│   ├── **CheckListControllers** 
+│   ├── **DashboardControllers** 
 
-│   ├── ##Data              
-│   │   ├── **AppDbContext**   
+### <span class="sub-title">Data</span>              
+│   ├── **AppDbContext**   
 
-│   ├── ##Migrations        
+### <span class="sub-title">Migrations</span>        
 
-│   ├── ##Models        
-│   │   ├── **AccountModel**  
-│   │   ├── **ChecklistModel**
-│   │   ├── **DashboardModel**
-│   │   ├── **ErrorViewModel**
+### <span class="sub-title">Models</span>        
+│   ├── **AccountModel**  
+│   ├── **ChecklistModel**
+│   ├── **DashboardModel**
+│   ├── **ErrorViewModel**
 
-│   ├── ##Services         
+### <span class="sub-title">Services</span>         
 
-│   ├── ##Views           
-│   │   ├── **Account**       
-│   │   ├── **Dashboard**     
-│   │   ├── **Electro**       
-│   │   ├── **FunksjonsTest** 
-│   │   ├── **Hydrolisk**     
-│   │   ├── **Mechanical**
-│   │   ├── **Roles**         
-│   │   ├── **ServiceOrder**  
-│   │   ├── **ServiceSkjema** 
-│   │   ├── **Trykk**         
+### <span class="sub-title">Views</span>           
+│   ├── **Account**       
+│   ├── **Dashboard**     
+│   ├── **Electro**       
+│   ├── **FunksjonsTest** 
+│   ├── **Hydrolisk**     
+│   ├── **Mechanical**
+│   ├── **Roles**         
+│   ├── **ServiceOrder**  
+│   ├── **ServiceSkjema** 
+│   ├── **Trykk**         
 
-│   ├── ##Shared         
-│   │   ├── **Layout.cshtml** 
-│   │   ├── **appsettings.json**
+### <span class="sub-title">Shared</span>         
+│   ├── **Layout.cshtml** 
+│   ├── **appsettings.json**
 
-│   ├── ##DockerFile         
+### <span class="sub-title">DockerFile</span>         
 
-│   ├── ##Program.cs
-</pre>
+### <span class="sub-title">Program.cs</span>
