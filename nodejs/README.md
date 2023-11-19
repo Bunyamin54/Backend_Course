@@ -1,46 +1,46 @@
+<h1>OurWinch-Nøsted-App (GitHub Repository Root)</h1>
+
 <code>
-### OurWinch-Nøsted-App (GitHub Repository Root)
+### Root             
+│   ├── # CSS         
+│   │   ├── **Layout.css** 
+│   ├── **Image**         
 
-│   ├── ## Root             
-│   │   ├── # CSS         
-│   │   │   ├── **Layout.css** 
-│   │   ├── **Image**         
+### Controllers      
+│   ├── **AccountControllers** 
+│   ├── **CheckListControllers** 
+│   ├── **DashboardControllers** 
 
-│   ├── ## Controllers      
-│   │   ├── **AccountControllers** 
-│   │   ├── **CheckListControllers** 
-│   │   ├── **DashboardControllers** 
+### Data              
+│   ├── **AppDbContext**   
 
-│   ├── ##Data              
-│   │   ├── **AppDbContext**   
+### Migrations        
 
-│   ├── ##Migrations        
+### Models        
+│   ├── **AccountModel**  
+│   ├── **ChecklistModel**
+│   ├── **DashboardModel**
+│   ├── **ErrorViewModel**
 
-│   ├── ##Models        
-│   │   ├── **AccountModel**  
-│   │   ├── **ChecklistModel**
-│   │   ├── **DashboardModel**
-│   │   ├── **ErrorViewModel**
+### Services         
 
-│   ├── ##Services         
+### Views           
+│   ├── **Account**       
+│   ├── **Dashboard**     
+│   ├── **Electro**       
+│   ├── **FunksjonsTest** 
+│   ├── **Hydrolisk**     
+│   ├── **Mechanical**
+│   ├── **Roles**         
+│   ├── **ServiceOrder**  
+│   ├── **ServiceSkjema** 
+│   ├── **Trykk**         
 
-│   ├── ##Views           
-│   │   ├── **Account**       
-│   │   ├── **Dashboard**     
-│   │   ├── **Electro**       
-│   │   ├── **FunksjonsTest** 
-│   │   ├── **Hydrolisk**     
-│   │   ├── **Mechanical**
-│   │   ├── **Roles**         
-│   │   ├── **ServiceOrder**  
-│   │   ├── **ServiceSkjema** 
-│   │   ├── **Trykk**         
+### Shared         
+│   ├── **Layout.cshtml** 
+│   ├── **appsettings.json**
 
-│   ├── ##Shared         
-│   │   ├── **Layout.cshtml** 
-│   │   ├── **appsettings.json**
+### DockerFile         
 
-│   ├── ##DockerFile         
-
-│   ├── ##Program.cs
+### Program.cs
 </code>
