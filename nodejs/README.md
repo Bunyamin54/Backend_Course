@@ -1,30 +1,30 @@
-# <span style="font-size:larger; font-weight:bold;">OurWinch-Nøsted-App (GitHub Repository Root)</span>
-
 <pre>
-│   ├── <span style="font-size:larger; font-weight:bold;"># Root</span>         
+  ## OurWinch-Nøsted-App (GitHub Repository Root) 
+
+│   ├── ## Root         
 │   │   ├── # CSS         
 │   │   │   ├── **Layout.css** 
 │   │   ├── **Image**         
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># Controllers</span>      
+│   ├── ## Controllers      
 │   │   ├── **AccountControllers** 
 │   │   ├── **CheckListControllers** 
 │   │   ├── **DashboardControllers** 
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># Data</span>              
+│   ├── ##Data              
 │   │   ├── **AppDbContext**   
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># Migrations</span>        
+│   ├── ##Migrations        
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># Models</span>        
+│   ├── ##Models        
 │   │   ├── **AccountModel**  
 │   │   ├── **ChecklistModel**
 │   │   ├── **DashboardModel**
 │   │   ├── **ErrorViewModel**
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># Services</span>         
+│   ├── ##Services         
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># Views</span>           
+│   ├── ##Views           
 │   │   ├── **Account**       
 │   │   ├── **Dashboard**     
 │   │   ├── **Electro**       
@@ -36,11 +36,11 @@
 │   │   ├── **ServiceSkjema** 
 │   │   ├── **Trykk**         
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># Shared</span>         
+│   ├── ##Shared         
 │   │   ├── **Layout.cshtml** 
 │   │   ├── **appsettings.json**
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># DockerFile</span>         
+│   ├── ##DockerFile         
 
-│   ├── <span style="font-size:larger; font-weight:bold;"># Program.cs</span>
+│   ├── ##Program.cs
 </pre>
