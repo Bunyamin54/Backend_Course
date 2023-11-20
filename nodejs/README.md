@@ -1,46 +1,46 @@
+# <span style="font-size:larger; font-weight:bold;">OurWinch-Nøsted-App (GitHub Repository Root)</span>
+
 <pre>
-  ## OurWinch-Nøsted-App (GitHub Repository Root) 
+│   ├── <span style="font-size:larger; font-weight:bold;">Root</span>         
+│   │   ├── <span style="font-size:larger; font-weight:bold;">CSS</span>         
+│   │   │   ├── <span style="font-size:larger; font-weight:bold;">Layout.css</span> 
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Image</span>         
 
-│   ├── ## Root         
-│   │   ├── # CSS         
-│   │   │   ├── **Layout.css** 
-│   │   ├── **Image**         
+│   ├── <span style="font-size:larger; font-weight:bold;">Controllers</span>      
+│   │   ├── <span style="font-size:larger; font-weight:bold;">AccountControllers</span> 
+│   │   ├── <span style="font-size:larger; font-weight:bold;">CheckListControllers</span> 
+│   │   ├── <span style="font-size:larger; font-weight:bold;">DashboardControllers</span> 
 
-│   ├── ## Controllers      
-│   │   ├── **AccountControllers** 
-│   │   ├── **CheckListControllers** 
-│   │   ├── **DashboardControllers** 
+│   ├── <span style="font-size:larger; font-weight:bold;">Data</span>              
+│   │   ├── <span style="font-size:larger; font-weight:bold;">AppDbContext</span>   
 
-│   ├── ##Data              
-│   │   ├── **AppDbContext**   
+│   ├── <span style="font-size:larger; font-weight:bold;">Migrations</span>        
 
-│   ├── ##Migrations        
+│   ├── <span style="font-size:larger; font-weight:bold;">Models</span>        
+│   │   ├── <span style="font-size:larger; font-weight:bold;">AccountModel</span>  
+│   │   ├── <span style="font-size:larger; font-weight:bold;">ChecklistModel</span>
+│   │   ├── <span style="font-size:larger; font-weight:bold;">DashboardModel</span>
+│   │   ├── <span style="font-size:larger; font-weight:bold;">ErrorViewModel</span>
 
-│   ├── ##Models        
-│   │   ├── **AccountModel**  
-│   │   ├── **ChecklistModel**
-│   │   ├── **DashboardModel**
-│   │   ├── **ErrorViewModel**
+│   ├── <span style="font-size:larger; font-weight:bold;">Services</span>         
 
-│   ├── ##Services         
+│   ├── <span style="font-size:larger; font-weight:bold;">Views</span>           
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Account</span>       
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Dashboard</span>     
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Electro</span>       
+│   │   ├── <span style="font-size:larger; font-weight:bold;">FunksjonsTest</span> 
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Hydrolisk</span>     
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Mechanical</span>
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Roles</span>         
+│   │   ├── <span style="font-size:larger; font-weight:bold;">ServiceOrder</span>  
+│   │   ├── <span style="font-size:larger; font-weight:bold;">ServiceSkjema</span> 
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Trykk</span>         
 
-│   ├── ##Views           
-│   │   ├── **Account**       
-│   │   ├── **Dashboard**     
-│   │   ├── **Electro**       
-│   │   ├── **FunksjonsTest** 
-│   │   ├── **Hydrolisk**     
-│   │   ├── **Mechanical**
-│   │   ├── **Roles**         
-│   │   ├── **ServiceOrder**  
-│   │   ├── **ServiceSkjema** 
-│   │   ├── **Trykk**         
+│   ├── <span style="font-size:larger; font-weight:bold;">Shared</span>         
+│   │   ├── <span style="font-size:larger; font-weight:bold;">Layout.cshtml</span> 
+│   │   ├── <span style="font-size:larger; font-weight:bold;">appsettings.json</span>
 
-│   ├── ##Shared         
-│   │   ├── **Layout.cshtml** 
-│   │   ├── **appsettings.json**
+│   ├── <span style="font-size:larger; font-weight:bold;">DockerFile</span>         
 
-│   ├── ##DockerFile         
-
-│   ├── ##Program.cs
+│   ├── <span style="font-size:larger; font-weight:bold;">Program.cs</span>
 </pre>
