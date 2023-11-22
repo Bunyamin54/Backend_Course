@@ -91,6 +91,7 @@ https://uia.instructure.com/courses/14002/files/2264630?module_item_id=514890
 
 This technological structure illustrates the technologies and libraries used in the project, along with the database and connection methods.
 
+<pre> 
 # Architectural Structure / MVC Architectural Pattern
 
 This code block follows the MVC (Model-View-Controller) architectural pattern. This pattern separates the application into three main components, providing a modular and easily maintainable structure.
@@ -132,12 +133,12 @@ Includes elements related to the user interface, such as Razor pages in the View
 Controller classes like AccountController receive HTTP requests, initiate processes, and redirect to the appropriate view to display results.
 
 ## Controllers
-      
+
 │   │   ├── **AccountControllers**    
 │   │   ├── **CheckListControllers** 
 │   │   ├── **DashboardControllers** 
 
-
+</pre>
 
 ## Main Components and Interactions of the Application
 
