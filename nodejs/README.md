@@ -1,6 +1,6 @@
   ```
   
-  # Project Title and Description: Digitization of Service Orders
+  < # Project Title and Description: Digitization of Service Orders
 
 ## Project Objective
 
@@ -344,7 +344,7 @@ sametdemirezen
 Sep 17 Oct 08 Oct 29 Nov 19
 aslnthir
 •	Pull Request #6: 11 commits, 243 ++, 121 --
-Sep 17 Oct 08 Oct 29 Nov 19
+Sep 17 Oct 08 Oct 29 Nov 19  >
 
 
 ```
