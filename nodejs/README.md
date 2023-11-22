@@ -6,19 +6,19 @@ The main goal of this project is to digitize the repair and maintenance processe
 
 ## Use Scenarios
 
-### Receiving Customer Service Requests
+### * Receiving Customer Service Requests
 
 Customers can submit service requests related to forestry winches by calling with the relevant information...
 
-### Management of Repair and Maintenance Processes
+### * Management of Repair and Maintenance Processes
 
 Repair or maintenance requests are digitally displayed by mechanical teams. Mechanical teams accept requests...
 
-### Reporting and Improvement Suggestions
+### * Reporting and Improvement Suggestions
 
 The system generates reports based on completed repairs, maintenance, and customer feedback. Warranty Service conducts analysis...
 
-## User-Friendly Interface and Mobile Access
+##  * User-Friendly Interface and Mobile Access
 
 A user-friendly interface for both office administrators and field mechanic teams. Easily accessible from PCs and smartphones. Responsive design.
 
@@ -26,9 +26,11 @@ A user-friendly interface for both office administrators and field mechanic team
 
 Appropriate authorization levels for each user type are created by the admin. Strong encryption methods for the security of sensitive data. Tokens, etc.
 
-# Developable and Expandable Structure
+## Developable and Expandable Structure
 
 The project can be developed and expanded to meet future needs. Being open source allows customization according to the company's specific requirements.
+ *** Nøsted.(2023,August 18). Prosjektbeskrivelse Nøsted & AS.pdf.
+https://uia.instructure.com/courses/14002/files/2264630?module_item_id=514890
 
 # Technological Structure
 
@@ -80,7 +82,7 @@ The project can be developed and expanded to meet future needs. Being open sourc
 
 - List of external dependencies, including packages and versions.
 
-## Project Directory Structure
+# Project Directory Structure
 
 - **ServiceApp:**
   - Files related to the service application.
@@ -89,21 +91,19 @@ The project can be developed and expanded to meet future needs. Being open sourc
 
 This technological structure illustrates the technologies and libraries used in the project, along with the database and connection methods.
 
-# Architectural Structure
-
-## MVC Architectural Pattern
+# Architectural Structure / MVC Architectural Pattern
 
 This code block follows the MVC (Model-View-Controller) architectural pattern. This pattern separates the application into three main components, providing a modular and easily maintainable structure.
 
-## Model
+## * Model
 
 Includes data models such as the AppDbContext class and Identity-related classes (ApplicationUser, IdentityRole, etc.). Database operations and user authorization processes are handled in this layer.
 
-## View
+## * View
 
 Includes elements related to the user interface, such as Razor pages in the Views folder and static files (CSS, JavaScript, etc.) in the wwwroot folder.
 
-## Controller
+## * Controller
 
 Controller classes like AccountController receive HTTP requests, initiate processes, and redirect to the appropriate view to display results.
 
