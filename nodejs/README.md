@@ -91,7 +91,7 @@ https://uia.instructure.com/courses/14002/files/2264630?module_item_id=514890
 
 This technological structure illustrates the technologies and libraries used in the project, along with the database and connection methods.
 
-<pre> 
+
 # Architectural Structure / MVC Architectural Pattern
 
 This code block follows the MVC (Model-View-Controller) architectural pattern. This pattern separates the application into three main components, providing a modular and easily maintainable structure.
@@ -99,7 +99,7 @@ This code block follows the MVC (Model-View-Controller) architectural pattern. T
 ## * Model
 
 Includes data models such as the AppDbContext class and Identity-related classes (ApplicationUser, IdentityRole, etc.). Database operations and user authorization processes are handled in this layer.
- 
+ <pre> 
  ## Models 
 
 │   │   ├── **AccountModel**        
@@ -107,11 +107,12 @@ Includes data models such as the AppDbContext class and Identity-related classes
 │   │   ├── **DashboardModel**      
 │   │   ├── **ErrorViewModel**      
 
+</pre>
 
 ## * View
 
 Includes elements related to the user interface, such as Razor pages in the Views folder and static files (CSS, JavaScript, etc.) in the wwww root folder.
-
+ <pre>
  ## Views 
 
 │   │   ├── **Account**          
@@ -125,13 +126,14 @@ Includes elements related to the user interface, such as Razor pages in the View
 │   │   ├── **ServiceSkjema**   
 │   │   ├── **Trykk**  
 │   │   ├── **User**          
-          
+
+      </pre>    
 
 
 ## * Controller
 
 Controller classes like AccountController receive HTTP requests, initiate processes, and redirect to the appropriate view to display results.
-
+ <pre>
 ## Controllers
 
 │   │   ├── **AccountControllers**    
