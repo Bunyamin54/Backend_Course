@@ -136,6 +136,7 @@ Interactions between these main components occur through HTTP requests and are h
 The directory structure below represents the organization of a C#/.NET application project. Each subdirectory and file has a specific responsibility.
 
 - **OurWinch-Nøsted-App (GitHub Repository Root)**
+<
  Root
 │   ├── CSS
 │   │   ├── Layout.css
@@ -173,7 +174,7 @@ The directory structure below represents the organization of a C#/.NET applicati
 │   ├── DockerFile
 │   │   ├── (Dockerfile used to create the Docker container for the application)
 │   ├── Program.cs
-│   │   ├── (the entry point file for the application)
+│   │   ├── (the entry point file for the application)   >
 
 
 This directory structure logically organizes different parts of the application, making it easier to maintain, extend, and understand. Each subdirectory and file has a specific responsibility, ensuring clean and organized project management.
