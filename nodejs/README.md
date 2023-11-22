@@ -429,7 +429,7 @@ For example, CSRF tokens are placed inside forms such as registration forms or l
 
 
 
-## XSS Protection
+# XSS Protection
 
 The application provides protection against Cross-Site Scripting (XSS) attacks by appropriately filtering or escaping user inputs and outputs, preventing potentially dangerous content within the application.
 
@@ -474,7 +474,7 @@ Sep 17 Oct 08 Oct 29 Nov 19
 ### Pull Request #6: 11 commits, 243 ++, 121 --
 Sep 17 Oct 08 Oct 29 Nov 19
 
-
+![Alt text](image.png)
 
 
 
