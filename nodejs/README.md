@@ -456,6 +456,10 @@ Logging Messages: Logging messages are carefully crafted to express the event in
 
 ## Sep 10, 2023 – Nov 22, 2023
 
+![Alt text](image.png)
+
+
+
 ## yildirimsinop
  ### Pull Request #1: 103 commits, 27,825 ++, 16,975 --
 Sep 17 Oct 08 Oct 29 Nov 19
@@ -475,7 +479,6 @@ Sep 17 Oct 08 Oct 29 Nov 19
 ### Pull Request #6: 11 commits, 243 ++, 121 --
 Sep 17 Oct 08 Oct 29 Nov 19
 
-![Alt text](image.png)
 
 ## Traffic
  
