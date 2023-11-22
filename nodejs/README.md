@@ -174,28 +174,6 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<ApplicationUser> ApplicationUser { get; set; }
 }
 
-
-### appsettings.json
-
-```json
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Debug",
-      "Microsoft": "Warning",
-      "Microsoft.Hosting.Lifetime": "Information"
-    }
-  },
-  "AllowedHosts": "*",
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=tcp:your database name**********,1433;Initial Catalog=**** yourDB;Persist Security Info=False;User ID=yourAdmin***;Password= your password******;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
-  },
-  "MailJet": {
-    "ApiKey": "**************",
-    "SecretKey": "*****************"
-  }
-}
-
 ## Swagger and Notyf Service
 
 Swagger is used to generate and view API documentation (AddSwaggerGen, UseSwagger, UseSwaggerUI). The Notyf service is used for managing notifications (AddNotyf).
