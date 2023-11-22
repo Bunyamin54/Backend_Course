@@ -2,22 +2,21 @@
 
 ## Project Objective
 
-The main goal of this project is to digitize the repair and maintenance processes of Nøsted & AS company's forestry winches. ...
+The main goal of this project is to digitize the repair and maintenance processes of Nøsted & AS company's forestry winches. This digitization covers all stages from receiving customer service requests to effectively managing the repair and maintenance processes. The project aims to provide a fast, user-friendly, and integrated solution by optimizing existing manual processes.
 
 ## Use Scenarios
 
 ### * Receiving Customer Service Requests
 
-Customers can submit service requests related to forestry winches by calling with the relevant information...
+Customers can submit service requests related to forestry winches by calling with the relevant information. Automatic categorization based on the nature of the request is done by the receptionist and recorded.
 
 ### * Management of Repair and Maintenance Processes
 
-Repair or maintenance requests are digitally displayed by mechanical teams. Mechanical teams accept requests...
+Repair or maintenance requests are digitally displayed by mechanical teams. Mechanical teams accept requests, update the status through the system, and if necessary, add additional information or create a new service order.
 
 ### * Reporting and Improvement Suggestions
 
-The system generates reports based on completed repairs, maintenance, and customer feedback. Warranty Service conducts analysis...
-
+The system generates reports based on completed repairs, maintenance, and customer feedback. Warranty Service conducts analysis under the headings of Repair and Maintenance. Improvement suggestions, such as (OK, Should Be Changed, Defective), are added by mechanical teams and presented to customers.
 ##  * User-Friendly Interface and Mobile Access
 
 A user-friendly interface for both office administrators and field mechanic teams. Easily accessible from PCs and smartphones. Responsive design.
@@ -29,6 +28,7 @@ Appropriate authorization levels for each user type are created by the admin. St
 ## Developable and Expandable Structure
 
 The project can be developed and expanded to meet future needs. Being open source allows customization according to the company's specific requirements.
+
  *** Nøsted.(2023,August 18). Prosjektbeskrivelse Nøsted & AS.pdf.
 https://uia.instructure.com/courses/14002/files/2264630?module_item_id=514890
 
