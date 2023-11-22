@@ -139,6 +139,32 @@ Controller classes like AccountController receive HTTP requests, initiate proces
 
 The Identity service added with the AddIdentity method handles user management and authorization processes, including operations like user registration, login, and role management.
 
+# Migration for Adding Identity Tables
+
+This migration script adds the necessary tables for ASP.NET Core Identity. It includes tables for roles, users, role claims, user claims, user logins, user roles, and user tokens.
+
+## Tables Created
+
+- `AspNetRoles`: Stores roles information.
+- `AspNetUsers`: Stores users information.
+- `AspNetRoleClaims`: Stores role claims.
+- `AspNetUserClaims`: Stores user claims.
+- `AspNetUserLogins`: Stores user logins.
+- `AspNetUserRoles`: Stores user roles.
+- `AspNetUserTokens`: Stores user tokens.
+
+## How to Apply the Migration
+
+To apply this migration, run the following command in the Package Manager Console:
+
+bash - Update-Database
+
+## How to Rollback the Migration
+
+If needed, you can rollback the migration by running the following command:
+
+### Remove-Migration
+
 # Database Connection
 
 Entity Framework Core, added with the AddDbContext method on AppDbContext, manages database operations. Access, query, and update operations on the database are performed through this layer.
