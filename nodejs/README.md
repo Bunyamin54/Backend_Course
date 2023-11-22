@@ -22,21 +22,21 @@ The system generates reports based on completed repairs, maintenance, and custom
 
 A user-friendly interface for both office administrators and field mechanic teams. Easily accessible from PCs and smartphones. Responsive design.
 
-## Security and Authorization
+# Security and Authorization
 
 Appropriate authorization levels for each user type are created by the admin. Strong encryption methods for the security of sensitive data. Tokens, etc.
 
-## Developable and Expandable Structure
+# Developable and Expandable Structure
 
 The project can be developed and expanded to meet future needs. Being open source allows customization according to the company's specific requirements.
 
 # Technological Structure
 
-## Programming Language and Version
+# Programming Language and Version
 1. Programming language: C#
    - Version: .NET 6.0
 
-## Used Technologies and Libraries
+# Used Technologies and Libraries
 
 - **ASP.NET Core Framework:**
   - Framework used for .NET Core-based web applications.
@@ -67,16 +67,16 @@ The project can be developed and expanded to meet future needs. Being open sourc
 - **Swashbuckle.AspNetCore:**
   - Library used for creating Swagger documentation and documenting APIs.
 
-## Database and Connection Methods
+# Database and Connection Methods
 
 - Database: SQL Server
 - Connection Method: via Entity Framework
 
-## Project Configuration File Examples
+# Project Configuration File Examples
 
 - .NET 6.0 targeting, user secrets, Docker configurations, etc.
 
-## Project Dependencies
+# Project Dependencies
 
 - List of external dependencies, including packages and versions.
 
@@ -95,37 +95,37 @@ This technological structure illustrates the technologies and libraries used in 
 
 This code block follows the MVC (Model-View-Controller) architectural pattern. This pattern separates the application into three main components, providing a modular and easily maintainable structure.
 
-### Model
+## Model
 
 Includes data models such as the AppDbContext class and Identity-related classes (ApplicationUser, IdentityRole, etc.). Database operations and user authorization processes are handled in this layer.
 
-### View
+## View
 
 Includes elements related to the user interface, such as Razor pages in the Views folder and static files (CSS, JavaScript, etc.) in the wwwroot folder.
 
-### Controller
+## Controller
 
 Controller classes like AccountController receive HTTP requests, initiate processes, and redirect to the appropriate view to display results.
 
 ## Main Components and Interactions of the Application
 
-### Identity Service
+## Identity Service
 
 The Identity service added with the AddIdentity method handles user management and authorization processes, including operations like user registration, login, and role management.
 
-### Database Connection
+# Database Connection
 
 Entity Framework Core, added with the AddDbContext method on AppDbContext, manages database operations. Access, query, and update operations on the database are performed through this layer.
 
-### Swagger and Notyf Service
+## Swagger and Notyf Service
 
 Swagger is used to generate and view API documentation (AddSwaggerGen, UseSwagger, UseSwaggerUI). The Notyf service is used for managing notifications (AddNotyf).
 
-### Email Sending Service
+## Email Sending Service
 
 The MailJetEmailSender class is used to perform email sending operations. This class implements the IEmailSender interface.
 
-### ServiceSkjemaService
+## ServiceSkjemaService
 
 The ServiceSkjemaService class represents a custom service, likely performing tasks such as business logic, data processing, or interaction with another service. This service is added with the AddScoped method, creating a scope for each HTTP request.
 
@@ -136,53 +136,45 @@ Interactions between these main components occur through HTTP requests and are h
 The directory structure below represents the organization of a C#/.NET application project. Each subdirectory and file has a specific responsibility.
 
 - **OurWinch-Nøsted-App (GitHub Repository Root)**
-  - **Root**
-    - **CSS:**
-      - Contains the general style files for the application, for example, `Layout.css`.
-    - **Image:**
-      - Visual files and images are stored here.
-    - **Controllers**
-      - **AccountControllers:**
-        - Controllers related to user accounts and authentication processes.
-      - **CheckListControllers:**
-        - Controllers managing checklist-related operations.
-      - **DashboardControllers:**
-        - Controllers related to the overview and dashboard operations.
+ Root
+│   ├── CSS
+│   │   ├── Layout.css
+│   ├── Image
+│   ├── Controllers
+│   │   ├── AccountControllers
+│   │   │   ├── (files related to user accounts and authentication processes)
+│   │   ├── CheckListControllers
+│   │   │   ├── (files managing checklist-related operations)
+│   │   ├── DashboardControllers
+│   │   │   ├── (files related to the overview and dashboard operations)
+│   ├── Data
+│   │   ├── AppDbContext
+│   │   │   ├── (files related to database connection and model definitions)
+│   ├── Migrations
+│   │   ├── (migration files tracking database changes)
+│   ├── Models
+│   │   ├── AccountModel
+│   │   │   ├── (files related to user accounts and authentication)
+│   │   ├── ChecklistModel
+│   │   │   ├── (files related to checklist operations)
+│   │   ├── DashboardModel
+│   │   │   ├── (files related to overview and dashboard operations)
+│   │   ├── ErrorViewModel
+│   │   │   ├── (files used for error display)
+│   ├── Services
+│   │   ├── (files containing service classes used within the application)
+│   ├── Views
+│   │   ├── (files representing different sections of the user interface)
+│   ├── Shared
+│   │   ├── Layout.cshtml
+│   │   │   ├── (commonly used view components)
+│   │   ├── appsettings.json
+│   │   │   ├── (the application's configuration file)
+│   ├── DockerFile
+│   │   ├── (Dockerfile used to create the Docker container for the application)
+│   ├── Program.cs
+│   │   ├── (the entry point file for the application)
 
-    - **Data**
-      - **AppDbContext:**
-        - Contains the DbContext class related to database connection and model definitions.
-
-    - **Migrations**
-      - Migration files tracking database changes are stored here.
-
-    - **Models**
-      - **AccountModel:**
-        - Models related to user accounts and authentication.
-      - **ChecklistModel:**
-        - Models related to checklist operations.
-      - **DashboardModel:**
-        - Models related to overview and dashboard operations.
-      - **ErrorViewModel:**
-        - Models used for error display.
-
-    - **Services**
-      - Contains service classes used within the application.
-
-    - **Views**
-      - Each view represents a section related to the user interface.
-
-    - **Shared**
-      - **Layout.cshtml:**
-        - Commonly used view components are stored in this directory.
-      - **appsettings.json:**
-        - The application's configuration file.
-
-    - **DockerFile:**
-      - Dockerfile used to create the Docker container for the application.
-
-    - **Program.cs:**
-      - The entry point file for the application.
 
 This directory structure logically organizes different parts of the application, making it easier to maintain, extend, and understand. Each subdirectory and file has a specific responsibility, ensuring clean and organized project management.
 
