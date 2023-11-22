@@ -98,14 +98,46 @@ This code block follows the MVC (Model-View-Controller) architectural pattern. T
 ## * Model
 
 Includes data models such as the AppDbContext class and Identity-related classes (ApplicationUser, IdentityRole, etc.). Database operations and user authorization processes are handled in this layer.
+ 
+ ## Models 
+
+│   │   ├── **AccountModel**        
+│   │   ├── **ChecklistModel**      
+│   │   ├── **DashboardModel**      
+│   │   ├── **ErrorViewModel**      
+
 
 ## * View
 
-Includes elements related to the user interface, such as Razor pages in the Views folder and static files (CSS, JavaScript, etc.) in the wwwroot folder.
+Includes elements related to the user interface, such as Razor pages in the Views folder and static files (CSS, JavaScript, etc.) in the wwww root folder.
+
+ ## Views 
+
+│   │   ├── **Account**          
+│   │   ├── **Dashboard**        
+│   │   ├── **Electro**         
+│   │   ├── **FunksjonsTest**   
+│   │   ├── **Hydrolisk**       
+│   │   ├── **Mechanical**      
+│   │   ├── **Roles**           
+│   │   ├── **ServiceOrder**    
+│   │   ├── **ServiceSkjema**   
+│   │   ├── **Trykk**  
+│   │   ├── **User**          
+          
+
 
 ## * Controller
 
 Controller classes like AccountController receive HTTP requests, initiate processes, and redirect to the appropriate view to display results.
+
+## Controllers
+      
+│   │   ├── **AccountControllers**    
+│   │   ├── **CheckListControllers** 
+│   │   ├── **DashboardControllers** 
+
+
 
 ## Main Components and Interactions of the Application
 
