@@ -206,7 +206,7 @@ We have listed the dependencies and packages used in our project to specify the 
 
 To start the project and install dependencies, follow the step-by-step instructions below.
 
-### 1. Clone the Project:
+## 1. Clone the Project:
 bash
 git clone https://github.com/username/project-name.git
 cd project-name
@@ -311,7 +311,7 @@ else
 # LogTo: Sets logging settings.
 
 
-### Security and Authorization
+## Security and Authorization
 ## Authentication and Authorization Mechanisms
 This section covers various account management and authorization processes at Nøsted & AS.
 
@@ -338,7 +338,7 @@ Controller containing role management pages. Accessible only by users with speci
 [Authorize(Policy = "OnlySuperAdminChecker")]
 public IActionResult Index()
 
-### CSRF Protection
+## CSRF Protection
 
 The application includes measures to protect against Cross-Site Request Forgery (CSRF) attacks. These measures involve adding unique tokens (CSRF tokens) to user sessions and requests to enhance security and prevent unauthorized requests.
 
@@ -358,7 +358,7 @@ The application provides protection against Cross-Site Scripting (XSS) attacks b
 
 <p>@Html.Raw(Model.UserInput)</p>
 
-### Error Tracking and Logging
+## Error Tracking and Logging
 ## Logging Strategy
 In this project, the built-in ILogger interface provided by ASP.NET Core is used for logging operations. Logging is an essential tool for understanding the application's state, detecting errors, and monitoring performance.
 
@@ -367,14 +367,15 @@ ILogger: The ILogger interface of ASP.NET Core is used for logging operations wi
 ## Logging Strategy
 Logging in the ServiceSkjemaController is based on the following strategy:
 
-# Logging Levels: Logging levels are used to log events at different levels of importance. Levels such as Information, Warning, and Error can be utilized.
-# Logging Messages: Logging messages are carefully crafted to express the event in a clear and understandable way. Well-formulated messages enhance the understanding of information within the log.
+ Logging Levels: Logging levels are used to log events at different levels of importance. Levels such as Information, Warning, and Error can be utilized.
+Logging Messages: Logging messages are carefully crafted to express the event in a clear and understandable way. Well-formulated messages enhance the understanding of information within the log.
 ## Example Logging Code
 
 //_logger.LogInformation("GetServiceSkjema called, ID: {ID}", id);
 
 
-### Contributors
+# Contributors
+
 ## Sep 10, 2023 – Nov 22, 2023
 
 # yildirimsinop
