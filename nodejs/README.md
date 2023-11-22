@@ -138,6 +138,43 @@ Controller classes like AccountController receive HTTP requests, initiate proces
 ## Identity Service
 
 The Identity service added with the AddIdentity method handles user management and authorization processes, including operations like user registration, login, and role management.
+
+# Database Connection
+
+Entity Framework Core, added with the AddDbContext method on AppDbContext, manages database operations. Access, query, and update operations on the database are performed through this layer.
+
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
+
+/// <summary>
+/// Represents the database context for the application, derived from IdentityDbContext for user management.
+/// </summary>
+public class AppDbContext : IdentityDbContext<ApplicationUser>
+{
+    /// <summary>
+    /// Initializes a new instance of the <see cref="AppDbContext"/> class.
+    /// </summary>
+    /// <param name="options">The options to be used by the context.</param>
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+        // Constructor logic.
+    }
+
+    /// <summary>
+    /// Gets or sets the DbSet for ServiceOrders.
+    /// </summary>
+    public DbSet<ServiceOrder> ServiceOrders { get; set; }
+
+   
+
+    /// <summary>
+    /// Gets or sets the DbSet for ApplicationUser.
+    /// </summary>
+    public DbSet<ApplicationUser> ApplicationUser { get; set; }
+}
+
+
 ### appsettings.json
 
 ```json
@@ -151,17 +188,13 @@ The Identity service added with the AddIdentity method handles user management a
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=tcp:****************,1433;Initial Catalog=NostedDB;Persist Security Info=False;User ID=nostedAdmin;Password= ******;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
+    "DefaultConnection": "Server=tcp:your database name**********,1433;Initial Catalog=**** yourDB;Persist Security Info=False;User ID=yourAdmin***;Password= your password******;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
   },
   "MailJet": {
     "ApiKey": "**************",
     "SecretKey": "*****************"
   }
 }
-
-# Database Connection
-
-Entity Framework Core, added with the AddDbContext method on AppDbContext, manages database operations. Access, query, and update operations on the database are performed through this layer.
 
 ## Swagger and Notyf Service
 
