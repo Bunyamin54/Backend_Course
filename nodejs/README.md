@@ -263,7 +263,7 @@ This directory structure logically organizes different parts of the application,
 
 We have listed the dependencies and packages used in our project to specify the essential libraries and tools needed to run the project.
 
-## Used Dependencies
+# Used Dependencies
 
 - Microsoft.AspNetCore.Identity.EntityFrame
 - Microsoft.AspNetCore.Identity.UI
@@ -275,7 +275,7 @@ We have listed the dependencies and packages used in our project to specify the 
 - Microsoft.VisualStudio.Azure.Cont
 - Microsoft.VisualStudio.Web.CodeGeneration
 
-## Installation Instructions
+# Installation Instructions
 
 To start the project and install dependencies, follow the step-by-step instructions below.
 
