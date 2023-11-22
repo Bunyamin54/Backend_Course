@@ -34,11 +34,11 @@ https://uia.instructure.com/courses/14002/files/2264630?module_item_id=514890
 
 # Technological Structure
 
-# Programming Language and Version
+## Programming Language and Version
 1. Programming language: C#
    - Version: .NET 6.0
 
-# Used Technologies and Libraries
+## Used Technologies and Libraries
 
 - **ASP.NET Core Framework:**
   - Framework used for .NET Core-based web applications.
@@ -69,16 +69,16 @@ https://uia.instructure.com/courses/14002/files/2264630?module_item_id=514890
 - **Swashbuckle.AspNetCore:**
   - Library used for creating Swagger documentation and documenting APIs.
 
-# Database and Connection Methods
+## Database and Connection Methods
 
 - Database: SQL Server
 - Connection Method: via Entity Framework
 
-# Project Configuration File Examples
+## Project Configuration File Examples
 
 - .NET 6.0 targeting, user secrets, Docker configurations, etc.
 
-# Project Dependencies
+## Project Dependencies
 
 - List of external dependencies, including packages and versions.
 
@@ -133,7 +133,7 @@ Controller classes like AccountController receive HTTP requests, initiate proces
 
 </pre>
 
-## Main Components and Interactions of the Application
+# Main Components and Interactions of the Application
 
 ## Identity Service
 
