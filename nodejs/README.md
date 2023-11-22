@@ -207,7 +207,197 @@ We have listed the dependencies and packages used in our project to specify the 
 To start the project and install dependencies, follow the step-by-step instructions below.
 
 ### 1. Clone the Project:
-
-```bash
+bash
 git clone https://github.com/username/project-name.git
 cd project-name
+
+## 2. Install Dependencies: 
+
+dotnet restore
+
+## 3. Install Entity Framework Tool
+
+dotnet tool install --global dotnet-ef
+
+## 4. Create Migrations:
+
+dotnet ef migrations add InitialCreate
+ ## 5. Update Database: 
+
+ dotnet ef database update
+
+## 6. Run the Project:
+dotnet run
+
+### Configuration File
+
+Create an appsettings.json file with the following content:
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Your-Database-Connection-String"
+  },
+  "MailJet": {
+    "ApiKey": "Your-MailJet-ApiKey",
+    "SecretKey": "Your-MailJet-SecretKey"
+  }
+}
+
+## Descriptions:
+
+# LogLevel: Determines the logging levels.
+# AllowedHosts: Specifies the allowed hosts.
+# ConnectionStrings: Contains the database connection string.
+# MailJet: Contains MailJet API keys.
+
+
+## Environment Variables and Configuration Management
+
+
+Program.cs file, explain the configuration processes and environment variables.
+
+// ...
+
+// App Configuration
+string? connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("Connection string is missing.");
+}
+
+// ...
+
+// Add the DbContext to the DI container.
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(connectionString, sqlServerOptionsAction: sqlOptions =>
+    {
+        sqlOptions.CommandTimeout(30); // Set the timeout for database commands
+    })
+    .LogTo(Console.WriteLine); // Add this line after the .UseSqlServer call
+});
+
+// ...
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name v1"));
+    app.UseDeveloperExceptionPage();  // Add this line.
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
+// ...
+
+
+## Descriptions:
+
+# GetConnectionString: Gets the database connection string.
+# AddDbContext: Adds the DbContext to the DI container.
+# UseSqlServer: Used for database interaction with SQL Server.
+# LogTo: Sets logging settings.
+
+
+### Security and Authorization
+## Authentication and Authorization Mechanisms
+This section covers various account management and authorization processes at Nøsted & AS.
+
+# User Registration (Register)
+The registration page allows users to sign up for the system. Users with the admin role can access this page.
+
+<!-- Show registration page if the user has the admin role -->
+@if(isAdmin) {
+
+}
+
+# Login
+The login page allows users to log into the system. It includes mechanisms for username and password authentication.
+
+<!-- Login form -->
+<form asp-action="Login" asp-controller="Account" method="post">
+
+</form>
+
+## Role-Based Control (Roles Controller)
+Controller containing role management pages. Accessible only by users with specific user roles.
+
+// Example of a method within the controller class
+[Authorize(Policy = "OnlySuperAdminChecker")]
+public IActionResult Index()
+
+### CSRF Protection
+
+The application includes measures to protect against Cross-Site Request Forgery (CSRF) attacks. These measures involve adding unique tokens (CSRF tokens) to user sessions and requests to enhance security and prevent unauthorized requests.
+
+For example, CSRF tokens are placed inside forms such as registration forms or login forms to ensure the security of requests.
+
+
+<form asp-controller="Account" asp-action="Register" method="post" role="form">
+    <input type="hidden" asp-for="__RequestVerificationToken" />
+    <button type="submit" class="btn btn-success" id="registerButton">Register</button>
+</form>
+
+
+
+### XSS Protection
+
+The application provides protection against Cross-Site Scripting (XSS) attacks by appropriately filtering or escaping user inputs and outputs, preventing potentially dangerous content within the application.
+
+<p>@Html.Raw(Model.UserInput)</p>
+
+### Error Tracking and Logging
+## Logging Strategy
+In this project, the built-in ILogger interface provided by ASP.NET Core is used for logging operations. Logging is an essential tool for understanding the application's state, detecting errors, and monitoring performance.
+
+## Used Logging Tools
+ILogger: The ILogger interface of ASP.NET Core is used for logging operations within the application, simplifying and managing logging processes.
+## Logging Strategy
+Logging in the ServiceSkjemaController is based on the following strategy:
+
+# Logging Levels: Logging levels are used to log events at different levels of importance. Levels such as Information, Warning, and Error can be utilized.
+# Logging Messages: Logging messages are carefully crafted to express the event in a clear and understandable way. Well-formulated messages enhance the understanding of information within the log.
+## Example Logging Code
+
+//_logger.LogInformation("GetServiceSkjema called, ID: {ID}", id);
+
+
+### Contributors
+## Sep 10, 2023 – Nov 22, 2023
+
+# yildirimsinop
+Pull Request #1: 103 commits, 27,825 ++, 16,975 --
+Sep 17 Oct 08 Oct 29 Nov 19
+# bxn0
+Pull Request #2: 46 commits, 79,819 ++, 767 --
+Sep 17 Oct 08 Oct 29 Nov 19
+# Bunyamin54
+Pull Request #3: 44 commits, 7,971 ++, 7,177 --
+Sep 17 Oct 08 Oct 29 Nov 19
+# Orhanyil
+Pull Request #4: 28 commits, 698 ++, 263 --
+Sep 17 Oct 08 Oct 29 Nov 19
+# sametdemirezen
+Pull Request #5: 25 commits, 2,851 ++, 1,924 --
+Sep 17 Oct 08 Oct 29 Nov 19
+# aslnthir
+Pull Request #6: 11 commits, 243 ++, 121 --
+Sep 17 Oct 08 Oct 29 Nov 19
+
+
+
+
+
+```
