@@ -279,6 +279,7 @@ We have listed the dependencies and packages used in our project to specify the 
 - Microsoft.VisualStudio.Azure.Cont
 - Microsoft.VisualStudio.Web.CodeGeneration
 
+![Alt text](image-2.png)
 # Installation Instructions
 
 To start the project and install dependencies, follow the step-by-step instructions below.
@@ -476,6 +477,7 @@ Sep 17 Oct 08 Oct 29 Nov 19
 
 ![Alt text](image.png)
 
-
-
+## Traffic
+ 
+ ![Alt text](image-1.png)
 ```
