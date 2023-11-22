@@ -138,6 +138,26 @@ Controller classes like AccountController receive HTTP requests, initiate proces
 ## Identity Service
 
 The Identity service added with the AddIdentity method handles user management and authorization processes, including operations like user registration, login, and role management.
+### appsettings.json
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=tcp:****************,1433;Initial Catalog=NostedDB;Persist Security Info=False;User ID=nostedAdmin;Password= ******;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
+  },
+  "MailJet": {
+    "ApiKey": "**************",
+    "SecretKey": "*****************"
+  }
+}
 
 # Database Connection
 
