@@ -136,7 +136,7 @@ Interactions between these main components occur through HTTP requests and are h
 The directory structure below represents the organization of a C#/.NET application project. Each subdirectory and file has a specific responsibility.
 
 - **OurWinch-Nøsted-App (GitHub Repository Root)**
-<
+ ``
  Root
 │   ├── CSS
 │   │   ├── Layout.css
@@ -174,7 +174,7 @@ The directory structure below represents the organization of a C#/.NET applicati
 │   ├── DockerFile
 │   │   ├── (Dockerfile used to create the Docker container for the application)
 │   ├── Program.cs
-│   │   ├── (the entry point file for the application)   >
+│   │   ├── (the entry point file for the application) ``
 
 
 This directory structure logically organizes different parts of the application, making it easier to maintain, extend, and understand. Each subdirectory and file has a specific responsibility, ensuring clean and organized project management.
@@ -371,23 +371,23 @@ Logging Messages: Logging messages are carefully crafted to express the event in
 
 ## Sep 10, 2023 – Nov 22, 2023
 
-# yildirimsinop
-Pull Request #1: 103 commits, 27,825 ++, 16,975 --
+## yildirimsinop
+ ### Pull Request #1: 103 commits, 27,825 ++, 16,975 --
 Sep 17 Oct 08 Oct 29 Nov 19
-# bxn0
-Pull Request #2: 46 commits, 79,819 ++, 767 --
+##  bxn0
+### Pull Request #2: 46 commits, 79,819 ++, 767 --
 Sep 17 Oct 08 Oct 29 Nov 19
-# Bunyamin54
-Pull Request #3: 44 commits, 7,971 ++, 7,177 --
+## Bunyamin54
+### Pull Request #3: 44 commits, 7,971 ++, 7,177 --
 Sep 17 Oct 08 Oct 29 Nov 19
-# Orhanyil
-Pull Request #4: 28 commits, 698 ++, 263 --
+## Orhanyil
+#### Pull Request #4: 28 commits, 698 ++, 263 --
 Sep 17 Oct 08 Oct 29 Nov 19
-# sametdemirezen
-Pull Request #5: 25 commits, 2,851 ++, 1,924 --
+## sametdemirezen
+### Pull Request #5: 25 commits, 2,851 ++, 1,924 --
 Sep 17 Oct 08 Oct 29 Nov 19
-# aslnthir
-Pull Request #6: 11 commits, 243 ++, 121 --
+## aslnthir
+### Pull Request #6: 11 commits, 243 ++, 121 --
 Sep 17 Oct 08 Oct 29 Nov 19
 
 
