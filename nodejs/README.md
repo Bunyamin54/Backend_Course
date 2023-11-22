@@ -102,10 +102,10 @@ Includes data models such as the AppDbContext class and Identity-related classes
  <pre> 
  ## Models 
 
-│   │   ├── **AccountModel**        
-│   │   ├── **ChecklistModel**      
-│   │   ├── **DashboardModel**      
-│   │   ├── **ErrorViewModel**      
+  │   ├── **AccountModel**        
+  │   ├── **ChecklistModel**      
+  │   ├── **DashboardModel**      
+  │   ├── **ErrorViewModel**      
 
 </pre>
 
@@ -115,17 +115,17 @@ Includes elements related to the user interface, such as Razor pages in the View
  <pre>
  ## Views 
 
-│   │   ├── **Account**          
-│   │   ├── **Dashboard**        
-│   │   ├── **Electro**         
-│   │   ├── **FunksjonsTest**   
-│   │   ├── **Hydrolisk**       
-│   │   ├── **Mechanical**      
-│   │   ├── **Roles**           
-│   │   ├── **ServiceOrder**    
-│   │   ├── **ServiceSkjema**   
-│   │   ├── **Trykk**  
-│   │   ├── **User**          
+  │   ├── **Account**          
+  │   ├── **Dashboard**        
+  │   ├── **Electro**         
+  │   ├── **FunksjonsTest**   
+  │   ├── **Hydrolisk**       
+  │   ├── **Mechanical**      
+  │   ├── **Roles**           
+  │   ├── **ServiceOrder**    
+  │   ├── **ServiceSkjema**   
+  │   ├── **Trykk**  
+  │   ├── **User**          
 
       </pre>    
 
@@ -136,9 +136,9 @@ Controller classes like AccountController receive HTTP requests, initiate proces
  <pre>
 ## Controllers
 
-│   │   ├── **AccountControllers**    
-│   │   ├── **CheckListControllers** 
-│   │   ├── **DashboardControllers** 
+   │   ├── **AccountControllers**    
+   │   ├── **CheckListControllers** 
+   │   ├── **DashboardControllers** 
 
 </pre>
 
