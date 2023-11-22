@@ -82,15 +82,6 @@ https://uia.instructure.com/courses/14002/files/2264630?module_item_id=514890
 
 - List of external dependencies, including packages and versions.
 
-# Project Directory Structure
-
-- **ServiceApp:**
-  - Files related to the service application.
-- **Views\Rapporter:**
-  - Files used for report views.
-
-This technological structure illustrates the technologies and libraries used in the project, along with the database and connection methods.
-
 
 # Architectural Structure / MVC Architectural Pattern
 
