@@ -137,7 +137,6 @@ The directory structure below represents the organization of a C#/.NET applicati
 
 ## OurWinch-Nøsted-App (GitHub Repository Root)
 <pre>
-```
 Root
 │
 ├── CSS
@@ -177,8 +176,6 @@ Root
 │   ├── (Dockerfile used to create the Docker container for the application)
 ├── Program.cs
 │   ├── (the entry point file for the application)
-
-```
 </pre>
 
 This directory structure logically organizes different parts of the application, making it easier to maintain, extend, and understand. Each subdirectory and file has a specific responsibility, ensuring clean and organized project management.
