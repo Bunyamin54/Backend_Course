@@ -489,4 +489,59 @@ Sep 17 Oct 08 Oct 29 Nov 19
 ## Traffic
  
  ![Alt text](image-1.png)
+
+
+
+
+
+
+
+new 
+
+## Expected Outcome
+
+![Project Snapshot](gif)
+
+
+# Contributors -  
+## - Burak Seymen    (https://github.com/bxn0)
+## - Umit Yildirim   (https://github.com/yildirimsinop)
+## - Bunyamin Genc   (https://github.com/Bunyamin54)
+## - Orhan Yildirim  (https://github.com/Orhanyil)
+## - Tahir Aslan     (https://github.com/aslnthir)
+## - Samet Demirezen (https://github.com/sametdemirezen
+
+
+
+
+### At the end of the project, following topics are to be covered;
+
+- C# 
+
+- GitHub 
+
+- Visual Studio Code
+
+- ASP.NET Core
+
+- HTML
+
+- Bootstrap - CSS
+
+- JavaScript
+
+- Azure Data Studio
+
+- SQL Server Management Studio (SSMS)
+
+- NuGet Package Manager
+
+
+
+
+
+
+
+
 ```
+
