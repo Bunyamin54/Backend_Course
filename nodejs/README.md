@@ -520,7 +520,7 @@ new
 
 - GitHub 
 
-- Visual Studio Code
+- Visual Studio 2022
 
 - ASP.NET Core
 
