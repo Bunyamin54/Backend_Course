@@ -458,13 +458,13 @@ Logging Messages: Logging messages are carefully crafted to express the event in
 
 ![Alt text](image.png)
 
-## Contributors -  
-# - Burak Seymen    (https://github.com/bxn0)
-# - Umit Yildirim   (https://github.com/yildirimsinop)
-#  -Bunyamin Genc   (https://github.com/Bunyamin54)
-# - Orhan Yildirim  (https://github.com/Orhanyil)
-# - Tahir Aslan     (https://github.com/aslnthir)
-# - Samet Demirezen (https://github.com/sametdemirezen
+# Contributors -  
+## - Burak Seymen    (https://github.com/bxn0)
+## - Umit Yildirim   (https://github.com/yildirimsinop)
+## - Bunyamin Genc   (https://github.com/Bunyamin54)
+## - Orhan Yildirim  (https://github.com/Orhanyil)
+## - Tahir Aslan     (https://github.com/aslnthir)
+## - Samet Demirezen (https://github.com/sametdemirezen
 
 ## yildirimsinop
  ### Pull Request #1: 103 commits, 27,825 ++, 16,975 --
