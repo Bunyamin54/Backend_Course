@@ -98,9 +98,10 @@ public async Task<IActionResult> Register(RegisterViewModel model)
 }
       </pre>   
 
-<pre>
+
 ## Login
 
+<pre>
 To log users into the system, use the Login method.
 [HttpGet]
 public IActionResult Login()
@@ -115,11 +116,12 @@ public async Task<IActionResult> Login(LoginViewModel model)
     // Login process
 }
 
-
  </pre>
 
-<pre>
  ## Logout
+
+<pre>
+
 To log out of the system, use the Logout method.
 
 [HttpPost]
