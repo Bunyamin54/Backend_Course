@@ -34,9 +34,121 @@ https://uia.instructure.com/courses/14002/files/2264630?module_item_id=514890
 
 # Technological Structure
 
+## At the end of the project, following topics are to be covered;
+
+### - C# 
+
+### - GitHub
+
+### - Visual Studio 2022
+
+### - ASP.NET Core
+
+### - HTML
+
+### - Bootstrap - CSS
+
+### - JavaScript
+
+### - Azure Data Studio
+
+### - SQL Server Management Studio (SSMS)
+
+### - NuGet Package Manager
+
+## Programming Language and Version
+
 ## Programming Language and Version
 1. Programming language: C#
    - Version: .NET 6.0
+
+
+## Constructor
+
+## AppDbContext
+This class represents the database context for the application, derived from IdentityDbContext for user management.
+public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+{
+    // Constructor logic.
+}
+
+# Account Controller
+
+This ASP.NET Core application includes an account controller that handles user account management operations.
+
+## Registration
+
+To register users and assign roles, use the `Register` method.
+
+```csharp
+[Authorize]
+[HttpGet]
+public async Task<IActionResult> Register()
+{
+    await EnsureRolesExist();
+
+    return View(new RegisterViewModel());
+}
+
+[Authorize]
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Register(RegisterViewModel model)
+{
+    // Registration process
+}
+
+## Login
+
+To log users into the system, use the Login method.
+[HttpGet]
+public IActionResult Login()
+{
+    return View();
+}
+
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Login(LoginViewModel model)
+{
+    // Login process
+}
+
+## Logout
+To log out of the system, use the Logout method.
+
+[HttpPost]
+[ValidateAntiForgeryToken]
+public async Task<IActionResult> Logout()
+{
+    // Logout process
+}
+
+# Service Order Controller
+
+This controller manages service order operations, including creating, updating status, and listing.
+
+## Create a New Service Order
+
+```csharp
+public IActionResult NewService()
+{
+    // Logic for creating a new service order
+}
+
+
+## Update Service Order Status
+
+[HttpPost]
+public IActionResult UpdateStatus(int id, string newStatus)
+{
+    // Logic for updating the status of a service order
+}
+
+
+
+
+
 
 ## Used Technologies and Libraries
 
