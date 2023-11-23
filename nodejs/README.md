@@ -80,7 +80,6 @@ This ASP.NET Core application includes an account controller that handles user a
 
 To register users and assign roles, use the `Register` method.
 
-```csharp
 [Authorize]
 [HttpGet]
 public async Task<IActionResult> Register()
@@ -130,7 +129,7 @@ This controller manages service order operations, including creating, updating s
 
 ## Create a New Service Order
 
-```csharp
+
 public IActionResult NewService()
 {
     // Logic for creating a new service order
@@ -144,10 +143,6 @@ public IActionResult UpdateStatus(int id, string newStatus)
 {
     // Logic for updating the status of a service order
 }
-
-
-
-
 
 
 ## Used Technologies and Libraries
