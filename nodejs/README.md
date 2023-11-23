@@ -72,14 +72,14 @@ public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     // Constructor logic.
 }
 
-# Account Controller
+## Account Controller
 
 This ASP.NET Core application includes an account controller that handles user account management operations.
 
 ## Registration
 
 To register users and assign roles, use the `Register` method.
-
+<pre>
 [Authorize]
 [HttpGet]
 public async Task<IActionResult> Register()
@@ -96,7 +96,9 @@ public async Task<IActionResult> Register(RegisterViewModel model)
 {
     // Registration process
 }
+      </pre>   
 
+<pre>
 ## Login
 
 To log users into the system, use the Login method.
@@ -113,7 +115,11 @@ public async Task<IActionResult> Login(LoginViewModel model)
     // Login process
 }
 
-## Logout
+
+ </pre>
+
+<pre>
+ ## Logout
 To log out of the system, use the Logout method.
 
 [HttpPost]
@@ -122,6 +128,8 @@ public async Task<IActionResult> Logout()
 {
     // Logout process
 }
+</pre>
+
 
 # Service Order Controller
 
@@ -129,20 +137,27 @@ This controller manages service order operations, including creating, updating s
 
 ## Create a New Service Order
 
+<pre> 
 
 public IActionResult NewService()
 {
     // Logic for creating a new service order
 }
+</pre>
+
 
 
 ## Update Service Order Status
 
+<pre> 
 [HttpPost]
 public IActionResult UpdateStatus(int id, string newStatus)
 {
     // Logic for updating the status of a service order
 }
+
+</pre>
+
 
 
 ## Used Technologies and Libraries
